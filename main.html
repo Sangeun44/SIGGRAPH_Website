@@ -1,3 +1,20 @@
+<!-- <?php
+
+if($_POST["submit"]) {
+    $recipient="upennacmsiggraph@gmail.com";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+?> -->
+
 <!DOCTYPE html>
 <html>
 <title>W3.CSS Template</title>
@@ -127,16 +144,6 @@
 <p>The SIG Center hosts a large and active ACM SIGGRAPH Student Chapter.</p>
 </div>
 
-<div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="res/empty-avatar.jpg" alt="Snow" style="width:100%">
-  <div class="w3-container">
-  <h3></h3>
-  <h4>Trade</h4>
-  <p>Blablabla</p>
-  </div>
-  </div>
-</div>
 
 </div>
 
@@ -263,8 +270,12 @@ body {font-family: Verdana, sans-serif;}
       <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i> SIGlab, Penn</p>
       <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i> upennacmsiggraph@gmail.com</p>
     </div>
+    
     <div class="w3-col m7">
-      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" 
+      action="mailto:upennacmsiggraph@gmail.com"
+      enctype="text/plain"> 
+      <!-- target="_blank"> -->
       <div class="w3-section">      
         <label>Name</label>
         <input class="w3-input" type="text" name="Name" required>
@@ -277,13 +288,26 @@ body {font-family: Verdana, sans-serif;}
         <label>Message</label>
         <input class="w3-input" type="text" name="Message" required>
       </div>  
-      <input class="w3-check" type="checkbox" checked name="Like">
-      <label>I Like it!</label>
       <button type="submit" class="w3-button w3-right w3-theme">Send</button>
       </form>
     </div>
   </div>
 </div>
+<!-- 
+<?=$thankYou ?>
+
+<form method="post" action="contact.php">
+    <label>Name:</label>
+    <input name="sender">
+
+    <label>Email address:</label>
+    <input name="senderEmail">
+
+    <label>Message:</label>
+    <textarea rows="5" cols="20" name="message"></textarea>
+
+    <input type="submit" name="submit">
+</form> -->
 
 <!-- Google Maps -->
 <!-- <div id="googleMap" style="width:100%;height:420px;"></div>

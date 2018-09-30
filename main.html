@@ -28,6 +28,17 @@
   </div>
 </div>
 
+<style type="text/css">
+  .bgimg {
+      background-image: url('res/group.jpg');
+      background-repeat: no-repeat;
+      background-position: center; 
+      position: relative;
+  }
+  </style>
+
+
+
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
   <img src="res/header.png" alt="boat" style="width:100%;min-height:100%;max-height:600px;" >
@@ -308,17 +319,20 @@ function showSlides(n) {
 
 
 
-<!-- Container
-<div class="w3-container" style="position:relative">
-  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
-  style="position:absolute;top:-28px;right:24px">+</a>
-</div> -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="agenda" width="100%" align = "center">
+<div class="bgimg w3-text-white" id="agenda" width="100%" align = "center">
   <!-- <div class="w3-quarter"> -->
-    <h1>The Agenda</h1>
-    <!-- </div> -->
-    <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=7035r7o0237bslke3rov67s5j4%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FNew_York" fontsize= "50%" style="border:solid 1px #777" width="60%" height="400px" frameborder="0" scrolling="no"></iframe>  <!-- <div class="w3-quarter"> -->
-   </div>
+    <!-- <div class="bgimg">
+      <h1>      
+        <img src="res/group.jpg" style="width:100%">
+      </h1>
+    </div> -->
+        <!-- <img src= "res/group.jpg" style="width:20%" class="w3-container">  -->
+    <div class="bgimg">
+      <h1 class="w3-container" "w3-text-white"> The Agenda</h1>
+      <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=7035r7o0237bslke3rov67s5j4%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FNew_York" fontsize= "50%" sZ width="400px" height="400px" frameborder="0" scrolling="no"></iframe>  <!-- <div class="w3-quarter"> -->
+      </div>
+</div>
+
 
 <!-- Contact Container -->
 <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">

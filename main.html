@@ -38,6 +38,18 @@
   }
   </style>
 
+<style> 
+  .newspaper {
+      -webkit-column-count: 3; /* Chrome, Safari, Opera */
+      -moz-column-count: 3; /* Firefox */
+      column-count: 3;
+  
+      -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+      -moz-column-gap: 40px; /* Firefox */
+      column-gap: 40px;
+  }
+  </style>
+
 
 
 <!-- Image Header -->
@@ -54,7 +66,7 @@
   </div>
   
   <div class="w3-col" id="work" align = "center" style="width:90%">
-    <h2 class = "w3-text-blue" style="text-shadow:1px 1px 0 #444">
+    <h2 class = "w3-text-blue w3-center" style="text-shadow:1px 1px 0 #444">
       <b>Our Chapter</b>
     </h2>
     <p>Penn's SIGGRAPH Chapter is a computer graphics oriented group which focuses on fostering a community of students interested in animation, computer science, games and VFX. 
@@ -247,16 +259,17 @@ function showSlides(n) {
   </h2>
 </div>
 
-<div class="w3-row-padding">
 
-  <div class="w3-container w3-quarter"  >
+<div class="newspaper">
+
+  <div class="w3-col w3-quarter"  >
       <img src="res/Bollar.jpg" style="width:45%" class="w3-card-4 w3-hover-opacity">
       <h3 class= "w3-container"> Hannah Bollar</h3>
       <p class= "w3-container">President</p>
       <p class= "w3-container"style="width:45%" >hbollar@seas.upenn.edu</p>
   </div>
 
-  <div class="w3-container w3-quarter" >
+  <div class="w3-col w3-quarter" >
       <img src="res/alyafei.png" style="width:45%" class="w3-card-4 w3-hover-opacity">
       <h3 class= "w3-container">Myles Al Yafei</h3>
       <p class= "w3-container">Vice President</p>
@@ -270,7 +283,7 @@ function showSlides(n) {
       <p class= "w3-container"style="width:45%" >clach@seas.upenn.edu</p>
   </div>
 
-  <div class="w3-container w3-quarter">
+  <div class="w3-col w3-quarter">
       <img src="res/Miller.jpg" style="width:45%" class="w3-card-4 w3-hover-opacity">
       <h3 class= "w3-container">Kathryn Miller</h3>
       <p class= "w3-container">Secretary</p>

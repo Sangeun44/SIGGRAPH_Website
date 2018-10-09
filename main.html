@@ -8,84 +8,148 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 <body id="myPage">
 
-<div class="w3-bar w3-theme-d2 w3-left-align">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-red"><i class="fa fa-home w3-margin-right"></i>PENN SIGGRAPH</a>
-  <a href="#works" class="w3-bar-item w3-button w3-hide-small w3-hover-red">Student Works</a>
-  <a href="#board" class="w3-bar-item w3-button w3-hide-small w3-hover-red">Board</a>
-  <a href="#agenda" class="w3-bar-item w3-button w3-hide-small w3-hover-red">Agenda</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-red">Contact</a>
+<style>
+  .newButton {
+      background-color: #01256e;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      cursor: pointer;
+  }
+  .newButton:hover {
+    background-color: #95001a; /* Green */
+    color: white;
+  }
+  .newButtonRed {
+    background-color: #95001a;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+  }
+  </style>
+  <style>
+    .bar {
+      background-color: #01256e;
+      height: 0px;
+    }
+    .background {
+      color: #000f3a;
+      background-color: #01256e;
+    }
+    .backgroundBlack {
+      color: #000f3a;
+      background-color: #000f3a;
+    }
+    .theme {
+      color: #ffff !important;
+      padding: 50px 15% 10%;
+      background:-webkit-linear-gradient(top,#01256e 25%,#01256e 75%)}
+  </style>
+
+  <style>
+    h1.fontTheme1 { 
+      font-family: 'Open Sans', sans-serif;
+      font-size: 50px; 
+      font-style: normal; 
+      font-variant: normal; 
+      font-weight: 100; 
+      line-height: 20px; 
+      padding: 10px 5px 5px 10px;
+    }
+
+    h1.fontTheme2 { 
+      font-family: 'Open Sans', sans-serif;
+      font-size: 50px; 
+      font-style: normal; 
+      font-variant: normal; 
+      font-weight: 100; 
+      line-height: 20px; 
+      padding: 60px 5px 60px 5px;
+    }
+    h3.fontTheme1 { 
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px; 
+      font-weight: 400; 
+      line-height: 10px; 
+      padding: 5px 5px 5px 5px;
+    }
+    h3.fontTheme2 { 
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px; 
+      font-weight: 700; 
+      line-height: 23px; 
+      padding: 5px 5px 5px 5px;
+    }
+    p.sansserif {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px; 
+    }
+    label.sansserif {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px; 
+    }
+  </style>
+
+<!-- top -->
+<div class="w3-bar background w3-left-align">
+  <a class="w3-bar-item newButton w3-hide-medium w3-hide-large w3-right w3-hover-white" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item newButtonRed">
+    <i class="fa fa-home w3-margin-right"></i>PENN SIGGRAPH</a>
+  <a href="#chapter" class="w3-bar-item newButton w3-hide-small">Chapter</a>
+  <a href="#works" class="w3-bar-item newButton w3-hide-small">Student Works</a>
+  <a href="#board" class="w3-bar-item newButton w3-hide-small">Board</a>
+  <a href="#agenda" class="w3-bar-item newButton w3-hide-small">Agenda</a>
+  <a href="#contact" class="w3-bar-item newButton w3-hide-small">Contact</a>
 </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#works" class="w3-bar-item w3-button">Student Works</a>
-    <a href="#board" class="w3-bar-item w3-button">Board</a>
-    <a href="#agenda" class="w3-bar-item w3-button">Agenda</a>
-    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    <!-- <a href="#" class="w3-bar-item w3-button">Search</a> -->
+      <a href="#chapter" class="w3-bar-item newButton w3-hide-small">Chapter</a>
+    <a href="#works" class="w3-bar-item newButton">Student Works</a>
+    <a href="#board" class="w3-bar-item newButton">Board</a>
+    <a href="#agenda" class="w3-bar-item newButton">Agenda</a>
+    <a href="#contact" class="w3-bar-item newButton">Contact</a>
   </div>
 </div>
-
-<style type="text/css">
-  .bgimg {
-      background-image: url('res/group.jpg');
-      background-repeat: no-repeat;
-      background-position: center; 
-      position: relative;
-  }
-  </style>
-
-<style> 
-  .newspaper {
-      -webkit-column-count: 3; /* Chrome, Safari, Opera */
-      -moz-column-count: 3; /* Firefox */
-      column-count: 3;
-  
-      -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-      -moz-column-gap: 40px; /* Firefox */
-      column-gap: 40px;
-  }
-  </style>
-
-
 
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
-  <img src="res/header.png" alt="boat" style="width:100%;min-height:100%;max-height:600px;" >
-  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
-    <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS"></button> -->
-  </div>
-</div>
-<div class="w3-row-padding ">
-  <!-- Work Row -->
-  <div class="w3-col" id="work" align = "left" style="width:5%">
-    <p> </p>
-  </div>
-  
-  <div class="w3-col" id="work" align = "center" style="width:90%">
-    <h2 class = "w3-text-blue w3-center" style="text-shadow:1px 1px 0 #444">
-      <b>Our Chapter</b>
-    </h2>
-    <p>Penn's SIGGRAPH Chapter is a computer graphics oriented group which focuses on fostering a community of students interested in animation, computer science, games and VFX. 
-      Some of SIGGRAPH's activities include a Demo Reel Night, weekly talks on computer graphics topics, tutorials, and movie nights.</p>
-  </div>
-  <div class="w3-col" id="work" align = "right" style="width:5%">
-    <p> </p>
-  </div>
-
+  <img src="res/header.png" alt="header" style=" width:100%; align-content:center; min-height:10%; max-height:100%;" >
 </div>
 
+<div class="w3-col theme">
+  <div class="w3-col" id="chapter" align = "center" width="20%">
+    <h1 class="fontTheme1">
+        Our Chapter
+    </h1>
+    <p class="sansserif"> 
+      Penn's SIGGRAPH Chapter is a computer graphics oriented group which focuses on fostering a community of students interested in animation, computer science, games and VFX. 
+      Some of SIGGRAPH's activities include a Demo Reel Night, weekly talks on computer graphics topics, tutorials, and movie nights.
+    </p>
+  </div>
+</div>
 
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="works" align = "center">
+<div class="w3-row-padding theme backgroundBlack" id="works" align = "center">
   <!-- <div class="w3-quarter"> -->
-      <h2 class = "w3-text-white" style="text-shadow:1px 1px 0 #444">
-          <b>Student Works</b>
-      </h2>
-    <p>Impressive Reel of DMD and CGGT Students at University of Pennsylvania</p>
-    <head>
+      <h1 class="fontTheme1">
+        Student Works
+      </h1>
+        <p class="sansserif">
+          Impressive Reel of DMD and CGGT Students at University of Pennsylvania
+        </p>
+      
+      <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <style>
       * {box-sizing: border-box}
@@ -199,9 +263,14 @@
       
       <div class="mySlides fade">
           <div style="padding:56.25% 0 0 0;position:relative;">
-            <iframe src="https://player.vimeo.com/video/286117660?autoplay=1&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/286117660?autoplay=1&portrait=0" 
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                    frameborder="0" 
+                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+            </iframe>
           </div><script src="https://player.vimeo.com/api/player.js"></script>
-          <p>Simulated using Houdini&#039;s grains, wire, and bullet solvers. <br />
+          <p class="sansserif">
+            Simulated using Houdini&#039;s grains, wire, and bullet solvers. <br />
           Responsible for all aspects except for the gazebo model.<br />
           Special thanks to Chris Friesen and Tim Sepulveda for their amazing teachings and inspiration.</p>
       </div>
@@ -248,116 +317,104 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
 }
-          </script>
+</script>
       
 </div>
 
-<!-- board Container -->
-<div class="w3-container w3-padding-64 w3-center" width="45%" id="board">
-<h2 class = "w3-text-blue" style="text-shadow:1px 1px 0 #444">
-    <b>MEET THE BOARD</b>
-  </h2>
+<div class="w3-center" width="45%" id="board">
+    <h1 class="fontTheme2" >
+      MEET THE BOARD
+    </h1>
 </div>
 
+<div class="w3-row" style="padding:1% 5% 10% 13%">
+<!-- board Container -->
 
-<div class="newspaper">
-
-  <div class="w3-col w3-quarter"  >
-      <img src="res/Bollar.jpg" style="width:45%" class="w3-card-4 w3-hover-opacity">
-      <h3 class= "w3-container"> Hannah Bollar</h3>
-      <p class= "w3-container">President</p>
-      <p class= "w3-container"style="width:45%" >hbollar@seas.upenn.edu</p>
+  <div class="w3-quarter" >
+      <img src="res/Bollar.jpg" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity">
+      <h3 class= "fontTheme2"> Hannah Bollar</h3>
+      <h3 class= "fontTheme1">President</h3>
+      <h3 class= "fontTheme1"style=" font-size: 15px;" >hbollar@seas.upenn.edu</h3>
   </div>
 
-  <div class="w3-col w3-quarter" >
-      <img src="res/alyafei.png" style="width:45%" class="w3-card-4 w3-hover-opacity">
-      <h3 class= "w3-container">Myles Al Yafei</h3>
-      <p class= "w3-container">Vice President</p>
-      <p class= "w3-container"style="width:45%" >alyafei@seas.upenn.edu</p>
+  <div class="w3-quarter" >
+      <img src="res/alyafei.png" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity">
+      <h3 class= "fontTheme2">Myles Al Yafei</h3>
+      <h3 class= "fontTheme1">Vice President</h3>
+      <h3 class= "fontTheme1"style="font-size: 15px;" >alyafei@seas.upenn.edu</h3>
   </div>
 
-  <div class="w3-col w3-quarter">
-      <img src="res/Lachanski.jpg" style="width:45%" class="w3-card-4 w3-hover-opacity">
-      <h3 class= "w3-container">Caroline Lachanski</h3>
-      <p class= "w3-container">Secretary</p>
-      <p class= "w3-container"style="width:45%" >clach@seas.upenn.edu</p>
+  <div class=" w3-quarter">
+      <img src="res/Lachanski.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
+      <h3 class= "fontTheme2">Caroline Lachanski</h3>
+      <h3 class= "fontTheme1">Secretary</h3>
+      <h3 class= "fontTheme1"style=" font-size: 15px;" >clach@seas.upenn.edu</h3>
+      
   </div>
-
-  <div class="w3-col w3-quarter">
-      <img src="res/Miller.jpg" style="width:45%" class="w3-card-4 w3-hover-opacity">
-      <h3 class= "w3-container">Kathryn Miller</h3>
-      <p class= "w3-container">Secretary</p>
-      <p class= "w3-container"style="width:45%" >kamill@seas.upenn.edu</p>
-  </div>
+  <div class=" w3-quarter">
+      <img src="res/Canarick.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
+      <h3 class= "fontTheme2">Adam Canarick</h3>
+      <h3 class= "fontTheme1">Treasurer</h3>
+      <h3 class= "fontTheme1"style=" font-size: 15px;" >canarick@seas.upenn.edu</h3> 
   </div>
 
   <div class="w3-row-padding">
 
-  <div class="w3-container w3-quarter">
-      <img src="res/Chiu.jpg" style="width:45%" class="w3-card-4 w3-hover-opacity">
-      <h3 class= "w3-container">Eric Chiu</h3>
-      <p class= "w3-container">Treasurer</p>
-      <p class= "w3-container"style="width:45%" >chiueric@seas.upenn.edu</p>
   </div>
 
-  <div class="w3-container w3-quarter">
-      <img src="res/Canarick.jpg" style="width:45%" class="w3-card-4 w3-hover-opacity">
-      <h3 class= "w3-container">Adam Canarick</h3>
-      <p class= "w3-container">Treasurer</p>
-      <p class= "w3-container"style="width:45%" >canarick@seas.upenn.edu</p> 
+  <div class="w3-quarter">
+      <img src="res/Lee.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
+    <h3 class= "fontTheme2">Sangeun Lee</h3>
+    <h3 class= "fontTheme1">Web-Master</h3>
+    <h3 class= "fontTheme1"style=" font-size: 15px;" >eunsang@seas.upenn.edu</h3> 
   </div>
 
-  <div class="w3-container w3-quarter">
-      <img src="res/Lee.jpg" style="width:45%" class="w3-card-4 w3-hover-opacity">
-    <h3 class= "w3-container">Sang Lee</h3>
-    <p class= "w3-container">Web-Master</p>
-    <p class= "w3-container"style="width:25%" >eunsang@seas.upenn.edu</p> 
+  <div class="w3-quarter">
+      <img src="res/Jang.png" style="width:55%" class="w3-card-4 w3-hover-opacity">
+    <h3 class= "fontTheme2">Nick Jang</h3>
+    <h3 class= "fontTheme1">Board Member</h3>
+    <h3 class= "fontTheme1" style=" font-size: 15px;" >nickjang@seas.upenn.edu</h3> 
   </div>
 
-  <div class="w3-container w3-quarter">
-      <img src="res/Jang.png" style="width:45%" class="w3-card-4 w3-hover-opacity">
-    <h3 class= "w3-container">Nick Jang</h3>
-    <p class= "w3-container">Board Member</p>
-    <p class= "w3-container" >nickjang@seas.upenn.edu</p> 
-  </div>
-</div>
-<div class="w3-row-padding">
-
-  <div class="w3-container w3-quarter">
-      <img src="res/Lu.jpg" style="width:45%" class="w3-card-4 w3-hover-opacity">
-      <h3 class= "w3-container">Jacky Lu</h3>
-      <p class= "w3-container">Board Member</p>
-      <p class= "w3-container" >jackylu@seas.upenn.edu</p> 
-  </div>
-</div>
-
-
-
-<div class="bgimg w3-text-white " style="text-shadow:1px 1px 0 #444" id="agenda" width="100%" height="100%" align = "center">
-  <!-- <div class="w3-quarter"> -->
-    <!-- <div class="bgimg">
-      <h1>      
-        <img src="res/group.jpg" style="width:100%">
-      </h1>
-    </div> -->
-        <!-- <img src= "res/group.jpg" style="width:20%" class="w3-container">  -->
-    <div class="bgimg">
-      <h1 class="w3-container" "w3-text-white"> The Agenda</h1>
-      <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=7035r7o0237bslke3rov67s5j4%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FNew_York" 
-        fontsize= "50%" sZ width="300px" height="500px" frameborder="0" scrolling="no"></iframe>  <!-- <div class="w3-quarter"> -->
+      <div class="w3-quarter">
+          <img src="res/gilbert.png" style="width:55%" class="w3-card-4 w3-hover-opacity">
+          <h3 class= "fontTheme2">Grace Gilbert</h3>
+          <h3 class= "fontTheme1">Board Member</h3>
+          <h3 class= "fontTheme1"style=" font-size: 15px;">gilbert@seas.upenn.edu</h3>
       </div>
+  
+    <div class=" w3-quarter">
+        <img src="res/Lu.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
+        <h3 class= "fontTheme2">Jacky Lu</h3>
+        <h3 class= "fontTheme1">Board Member</h3>
+        <h3 class= "fontTheme1" style=" font-size: 15px;">jackylu@seas.upenn.edu</h3> 
+    </div>
+</div>
+
+</div>
+
+
+<div class="background" align="center" id="agenda"> 
+    <h1 class="fontTheme2" style="color:white"> The Agenda </h1>
+  <div class="background w3-row" >
+      <img src="res/group.jpg" align="center" style="width:60%; padding: 1% 5% 5% 5%;">  
+      <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=900&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=7035r7o0237bslke3rov67s5j4%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FNew_York" 
+    height="300px" align="center" frameborder="0" style="padding: 1% 1%"scrolling="no">         </iframe> 
+  </div>
+  <div class="background w3-col" id="agenda" >
+    </div>
 </div>
 
 
 <!-- Contact Container -->
-<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+<div class="w3-container w3-padding-64 w3-theme-l5" padding:"50px"id="contact">
   <div class="w3-row">
     <div class="w3-col m5">
     <div class="w3-padding-16">
-      <span class="w3-xlarge w3-border-pale-blue w3-bottombar" style="text-shadow:.5px .5px 0 #444">Contact Us</span></div>
-      <p>Swing by for a cup of java!</p>
-      <p><i class="fa fa-map-marker w3-text-pale-blue w3-xlarge"></i> SIGlab, Penn</p>
-      <p><i class="fa fa-envelope-o w3-text-pale-blue w3-xlarge"></i> upennacmsiggraph@gmail.com</p>
+      <p class="sansserif w3-border-pale-blue w3-bottombar">Contact Us</p></div>
+      <p class="sansserif">Swing by for a cup of java!</p>
+      <p class="sansserif"><i class="fa fa-map-marker w3-text-blue"></i> SIGlab, Penn</p>
+      <p class="sansserif"><i class="fa fa-envelope-o w3-text-blue w3-xlarge"></i> upennacmsiggraph@gmail.com</p>
     </div>
     
     <div class="w3-col m7">
@@ -366,34 +423,43 @@ function showSlides(n) {
       enctype="text/plain"> 
       <!-- target="_blank"> -->
       <div class="w3-section">      
-        <label>Name</label>
+        <label class="sansserif">Name</label>
         <input class="w3-input" type="text" name="Name" required>
       </div>
       <div class="w3-section">      
-        <label>Email</label>
+          <label class="sansserif">Email</label>
         <input class="w3-input" type="text" name="Email" required>
       </div>
       <div class="w3-section">      
-        <label>Message</label>
+          <label class="sansserif">Message</label>
         <input class="w3-input" type="text" name="Message" required>
       </div>  
-      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      <button type="submit" class="newButton w3-right ">Send</button>
       </form>
     </div>
   </div>
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
-  <h4 style="text-shadow:1px 1px 0 #444">Follow Us</h4>
-  <a class="w3-button w3-large w3-pale-blue" href="https://www.facebook.com/groups/161186224080072/" title="Facebook"><i class="fa fa-facebook"></i></a>
-  <a class="w3-button w3-large w3-pale-blue" href="http://www.cg.cis.upenn.edu/" title="website"><i class="fa-handshake-o"></i></a>
-  <p>Powered by <label>W3 school and </label><a href="https://www.seas.upenn.edu/" target="_blank">Penn Engineering</a></p>
+<footer class="w3-container w3-padding-32 theme w3-center">
+  <h1 class="fontTheme1" style="font-size: 25px; padding:5px;"> Follow Us </h1>
+  <a class="w3-button w3-large w3-blue" href="https://www.facebook.com/groups/161186224080072/" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-blue" href="http://www.cg.cis.upenn.edu/" title="website"><i class="fa fa-handshake-o"></i></a>
+  <p class="sansserif" style="font-size: 15px">Powered by 
+    <label> W3 school and </label>
+    <a href="https://www.seas.upenn.edu/" target="_blank">Penn Engineering</a>
+  </p>
 
-  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding w3-pale-blue w3-hide-small">Go To Top</span>   
-    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
-    <i class="fa fa-chevron-circle-up"></i></span></a>
+  <div style="position:relative; bottom:100px; z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding theme w3-hide-small">
+      Go To Top
+    </span>   
+    
+    <a class="w3-button w3-theme" href="#myPage">
+      <span class="w3-xlarge">
+        <i class="fa fa-chevron-circle-up"></i>
+      </span>
+  </a>
   </div>
 </footer> 
 

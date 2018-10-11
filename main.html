@@ -51,6 +51,10 @@
       color: #000f3a;
       background-color: #000f3a;
     }
+    .backgroundWhite {
+      color: #000f3a;
+      background-color: #ffff;
+    }
     .theme {
       color: #ffff !important;
       padding: 50px 15% 10%;
@@ -63,6 +67,15 @@
 
   <style>
     h1.fontTheme1 { 
+      font-family: 'Open Sans', sans-serif;
+      font-size: 50px; 
+      font-style: normal; 
+      font-variant: normal; 
+      font-weight: 100; 
+      line-height: 40px; 
+      padding: 10px 5px 5px 10px;
+    }
+    h1.fontThemeBlack { 
       font-family: 'Open Sans', sans-serif;
       font-size: 50px; 
       font-style: normal; 
@@ -339,72 +352,74 @@ function showSlides(n) {
       
 </div>
 
-<div class="w3-center"  width="45%" id="board">
-    <h1 class="fontTheme2" >
+
+  <!-- board Container -->
+  <div class="w3-center backgroundWhite"  width="45%" id="board" style="padding:3% 5% 5% 5%">
+    <h1 class="fontThemeBlack" style="padding:3% 5% 5% 5%" >
       MEET THE BOARD
     </h1>
-</div>
+  
+    <div class="w3-row" style="padding:1% 5% 10% 5%">
+      <div class="w3-quarter" >
+          <img src="res/Bollar.jpg" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity">
+          <h3 class= "fontTheme2"> Hannah Bollar</h3>
+          <h3 class= "fontTheme1">President</h3>
+          <h3 class= "fontTheme1"style=" font-size: 15px;" >hbollar@seas.upenn.edu</h3>
+      </div>
 
-<div class="w3-row" style="padding:1% 6% 10% 10%">
-<!-- board Container -->
+      <div class="w3-quarter" >
+          <img src="res/alyafei.png" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity">
+          <h3 class= "fontTheme2">Myles Al Yafei</h3>
+          <h3 class= "fontTheme1">Vice President</h3>
+          <h3 class= "fontTheme1"style="font-size: 15px;" >alyafei@seas.upenn.edu</h3>
+      </div>
 
-  <div class="w3-quarter" >
-      <img src="res/Bollar.jpg" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity">
-      <h3 class= "fontTheme2"> Hannah Bollar</h3>
-      <h3 class= "fontTheme1">President</h3>
-      <h3 class= "fontTheme1"style=" font-size: 15px;" >hbollar@seas.upenn.edu</h3>
-  </div>
+      <div class=" w3-quarter">
+          <img src="res/Lachanski.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
+          <h3 class= "fontTheme2">Caroline Lachanski</h3>
+          <h3 class= "fontTheme1">Secretary</h3>
+          <h3 class= "fontTheme1"style=" font-size: 15px;" >clach@seas.upenn.edu</h3> 
+      </div>
 
-  <div class="w3-quarter" >
-      <img src="res/alyafei.png" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity">
-      <h3 class= "fontTheme2">Myles Al Yafei</h3>
-      <h3 class= "fontTheme1">Vice President</h3>
-      <h3 class= "fontTheme1"style="font-size: 15px;" >alyafei@seas.upenn.edu</h3>
-  </div>
+      <div class=" w3-quarter ">
+          <img src="res/Canarick.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
+          <h3 class= "fontTheme2">Adam Canarick</h3>
+          <h3 class= "fontTheme1">Treasurer</h3>
+          <h3 class= "fontTheme1"style=" font-size: 15px;" >canarick@seas.upenn.edu</h3> 
+      </div>
+    </div>
 
-  <div class=" w3-quarter">
-      <img src="res/Lachanski.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
-      <h3 class= "fontTheme2">Caroline Lachanski</h3>
-      <h3 class= "fontTheme1">Secretary</h3>
-      <h3 class= "fontTheme1"style=" font-size: 15px;" >clach@seas.upenn.edu</h3>
-      
-  </div>
-  <div class=" w3-quarter">
-      <img src="res/Canarick.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
-      <h3 class= "fontTheme2">Adam Canarick</h3>
-      <h3 class= "fontTheme1">Treasurer</h3>
-      <h3 class= "fontTheme1"style=" font-size: 15px;" >canarick@seas.upenn.edu</h3> 
-  </div>
-</div>
-
-<div class="w3-row" style="padding:1% 6% 10% 10%">
-
-  <div class="w3-quarter">
-      <img src="res/Lee.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
-    <h3 class= "fontTheme2">Sangeun Lee</h3>
-    <h3 class= "fontTheme1">Web-Master</h3>
-    <h3 class= "fontTheme1"style=" font-size: 15px;" >eunsang@seas.upenn.edu</h3> 
-  </div>
-
-  <div class="w3-quarter">
-      <img src="res/Jang.png" style="width:55%" class="w3-card-4 w3-hover-opacity">
-    <h3 class= "fontTheme2">Nick Jang</h3>
-    <h3 class= "fontTheme1">Board Member</h3>
-    <h3 class= "fontTheme1" style=" font-size: 15px;" >nickjang@seas.upenn.edu</h3> 
-  </div>
+  <div class="w3-row" style="padding:1% 5% 5% 5%">
+      <div class="w3-quarter">
+          <img src="res/Lee.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
+        <h3 class= "fontTheme2">Sangeun Lee</h3>
+        <h3 class= "fontTheme1">Web-Master</h3>
+        <h3 class= "fontTheme1"style=" font-size: 15px;" >eunsang@seas.upenn.edu</h3> 
+      </div>
 
       <div class="w3-quarter">
-          <img src="res/gilbert.png" style="width:55%" class="w3-card-4 w3-hover-opacity">
-          <h3 class= "fontTheme2">Grace Gilbert</h3>
-          <h3 class= "fontTheme1">Board Member</h3>
-          <h3 class= "fontTheme1"style=" font-size: 15px;">gilbert@seas.upenn.edu</h3>
-      </div>
-  
-    <div class=" w3-quarter">
-        <img src="res/Lu.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
-        <h3 class= "fontTheme2">Jacky Lu</h3>
+          <img src="res/Jang.png" style="width:55%" class="w3-card-4 w3-hover-opacity">
+        <h3 class= "fontTheme2">Nick Jang</h3>
         <h3 class= "fontTheme1">Board Member</h3>
-        <h3 class= "fontTheme1" style=" font-size: 15px;">jackylu@seas.upenn.edu</h3> 
+        <h3 class= "fontTheme1" style=" font-size: 15px;" >nickjang@seas.upenn.edu</h3> 
+      </div>
+
+      <div class="w3-quarter">
+           <img src="res/gilbert.png" style="width:55%" class="w3-card-4 w3-hover-opacity">
+           <h3 class= "fontTheme2">Grace Gilbert</h3>
+           <h3 class= "fontTheme1">Board Member</h3>              
+           <h3 class= "fontTheme1"style=" font-size: 15px;">gilbert@seas.upenn.edu</h3>
+      </div>
+      
+      <div class=" w3-quarter">
+            <img src="res/Lu.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
+            <h3 class= "fontTheme2">Jacky Lu</h3>
+            <h3 class= "fontTheme1">Board Member</h3>
+            <h3 class= "fontTheme1" style=" font-size: 15px;">jackylu@seas.upenn.edu</h3> 
+      </div>
+
+    </div>
+
     </div>
 </div>
 

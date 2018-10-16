@@ -1,6 +1,5 @@
-
-
 <!DOCTYPE html>
+
 <html>
 <title>PENN SIGGRAPH</title>
 <meta charset="UTF-8">
@@ -9,10 +8,125 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+
 <body id="myPage">
 
-<style>
-  .newButton {
+  <style>
+    div.scrollmenu {
+        background-color: rgb(23, 20, 20);
+        overflow: auto;
+        padding: 10px 5px 10px 5px;
+        white-space: nowrap;
+    }
+    
+    div.scrollmenu img {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 5px 5px 5px 5px;
+        text-decoration: none;
+    }
+    
+    div.scrollmenu img:hover {
+        background-color: #777;
+        transform: scale(1.2);
+       
+    }
+  </style>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    
+    #myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    #myImg:hover {opacity: 0.7;}
+    
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    
+    /* Modal Content (image) */
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+    
+    /* Caption of Modal Image */
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+    
+    /* Add Animation */
+    .modal-content, #caption {    
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+    
+    @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+    }
+    
+    @keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+    }
+    
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+        .modal-content {
+            width: 100%;
+        }
+    }
+    </style>
+  <style>
+    .newButton {
       background-color: #01256e;
       border: none;
       color: white;
@@ -22,13 +136,16 @@
       font-family: 'Open Sans', sans-serif;
       font-size: 16px;
       cursor: pointer;
-  }
-  .newButton:hover {
-    background-color: #95001a; /* Green */
-    color: white;
-  }
-  .newButtonRed {
-    background-color: #95001a;
+    }
+
+    .newButton:hover {
+      background-color: #95001a;
+      /* Green */
+      color: white;
+    }
+
+    .newButtonRed {
+      background-color: #95001a;
       border: none;
       color: white;
       text-align: center;
@@ -36,489 +153,830 @@
       display: inline-block;
       font-size: 16px;
       cursor: pointer;
-  }
+    }
   </style>
   <style>
     .bar {
       background-color: #01256e;
       height: 0px;
     }
+
     .background {
       color: #000f3a;
       background-color: #01256e;
     }
+
     .backgroundBlack {
       color: #000f3a;
       background-color: #000f3a;
     }
+
     .backgroundWhite {
       color: #000f3a;
       background-color: #ffff;
     }
+
     .theme {
       color: #ffff !important;
       padding: 50px 15% 10%;
-      background:-webkit-linear-gradient(top,#01256e 25%,#01256e 75%)}
+      background: -webkit-linear-gradient(top, #01256e 25%, #01256e 75%)
+    }
+
     .smallTheme {
       color: #ffff !important;
       padding: 10px 1% 10%;
-      background:-webkit-linear-gradient(top,#01256e 25%,#01256e 75%)}
+      background: -webkit-linear-gradient(top, #01256e 25%, #01256e 75%)
+    }
   </style>
-
   <style>
-    h1.fontTheme1 { 
-      font-family: 'Open Sans', sans-serif;
-      font-size: 50px; 
-      font-style: normal; 
-      font-variant: normal; 
-      font-weight: 100; 
-      line-height: 40px; 
-      padding: 10px 5px 5px 10px;
+    .newspaper {
+      -webkit-column-count: 6;
+      /* Chrome, Safari, Opera */
+      -moz-column-count: 6;
+      /* Firefox */
+      column-count: 6;
+      -webkit-column-gap: 150px;
+      /* Chrome, Safari, Opera */
+      -moz-column-gap: 150px;
+      /* Firefox */
+      column-gap: 150px;
+      -webkit-column-rule: 1px solid #01256e;
+      /* Chrome, Safari, Opera */
+      -moz-column-rule: 1px solid #01256e;
+      /* Firefox */
+      column-rule: 1px solid #01256e;
+      -webkit-column-width: 100px;
+      /* Chrome, Safari, Opera */
+      -moz-column-width: 100px;
+      /* Firefox */
+      column-width: 100px;
     }
-    h1.fontThemeBlack { 
+
+    h2.newPaper {
+      -webkit-column-span: all;
+      /* Chrome, Safari, Opera */
+      column-span: 1;
       font-family: 'Open Sans', sans-serif;
-      font-size: 50px; 
-      font-style: normal; 
-      font-variant: normal; 
-      font-weight: 100; 
-      line-height: 40px; 
+
+    }
+  </style>
+  <style>
+    h1.fontTheme1 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 50px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 100;
+      line-height: 40px;
       padding: 10px 5px 5px 10px;
     }
 
-    h1.fontTheme2 { 
+    h1.fontThemeBlack {
       font-family: 'Open Sans', sans-serif;
-      font-size: 50px; 
-      font-style: normal; 
-      font-variant: normal; 
-      font-weight: 100; 
-      line-height: 40px; 
+      font-size: 50px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 100;
+      line-height: 40px;
+      padding: 10px 5px 5px 10px;
+    }
+
+    h1.fontTheme2 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 50px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 100;
+      line-height: 40px;
       padding: 60px 5px 60px 5px;
     }
-    h3.fontTheme1 { 
+
+    h3.fontTheme1 {
       font-family: 'Open Sans', sans-serif;
-      font-size: 20px; 
-      font-weight: 400; 
-      line-height: 23px; 
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 23px;
       padding: 5px 5px 5px 5px;
     }
-    h3.fontTheme2 { 
+
+    h3.fontTheme2 {
       font-family: 'Open Sans', sans-serif;
-      font-size: 20px; 
-      font-weight: 700; 
-      line-height: 23px; 
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 23px;
       padding: 5px 5px 5px 5px;
     }
-    h3.smallTheme { 
+
+    h3.smallTheme {
       font-family: 'Open Sans', sans-serif;
-      font-size: 10px; 
-      font-weight: 700; 
-      line-height: 23px; 
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 23px;
       padding: 5px 5px 5px 5px;
     }
+
     p.sansserif {
       font-family: 'Open Sans', sans-serif;
-      font-size: 20px; 
+      font-size: 20px;
     }
+
     label.sansserif {
       font-family: 'Open Sans', sans-serif;
-      font-size: 20px; 
+      font-size: 20px;
     }
   </style>
 
-<!-- top -->
-<div class="w3-bar background w3-left-align">
-  <a class="w3-bar-item newButton w3-hide-medium w3-hide-large w3-right w3-hover-white" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item newButtonRed">
-    <i class="fa fa-home w3-margin-right"></i>PENN SIGGRAPH</a>
-  <a href="#chapter" class="w3-bar-item newButton w3-hide-small">Chapter</a>
-  <a href="#works" class="w3-bar-item newButton w3-hide-small">Student Works</a>
-  <a href="#board" class="w3-bar-item newButton w3-hide-small">Board</a>
-  <a href="#agenda" class="w3-bar-item newButton w3-hide-small">Agenda</a>
-  <a href="#contact" class="w3-bar-item newButton w3-hide-small">Contact</a>
-</div>
+  <!-- top -->
+  <div class="w3-bar background w3-left-align">
+    <a class="w3-bar-item newButton w3-hide-medium w3-hide-large w3-right w3-hover-white" href="javascript:void(0);" onclick="openNav()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#" class="w3-bar-item newButtonRed">
+      <i class="fa fa-home w3-margin-right"></i>PENN SIGGRAPH</a>
+    <a href="#chapter" class="w3-bar-item newButton w3-hide-small">Chapter</a>
+    <a href="#works" class="w3-bar-item newButton w3-hide-small">Student Works</a>
+    <a href="#board" class="w3-bar-item newButton w3-hide-small">Board</a>
+    <a href="#agenda" class="w3-bar-item newButton w3-hide-small">Agenda</a>
+    <a href="#contact" class="w3-bar-item newButton w3-hide-small">Contact</a>
+  </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-      <a href="#chapter" class="w3-bar-item newButton w3-hide-small">Chapter</a>
+    <a href="#chapter" class="w3-bar-item newButton w3-hide-small">Chapter</a>
     <a href="#works" class="w3-bar-item newButton">Student Works</a>
     <a href="#board" class="w3-bar-item newButton">Board</a>
     <a href="#agenda" class="w3-bar-item newButton">Agenda</a>
     <a href="#contact" class="w3-bar-item newButton">Contact</a>
   </div>
-</div>
-
-<!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
-  <img src="res/header.png" alt="header" style=" width:100%; align-content:center; min-height:10%; max-height:100%;" >
-</div>
-
-<div class="w3-col smallTheme">
-  <div class="w3-col" align="center" width="40%">
-    <h3 class="smallTheme">
-        Featuring works from Aliya Chen, Felicia Chen, Jacky Lu, Kathryn Miller, Myles Al Yafei, Grace Gilbert, Byumjin Kim, Alex McCraw, Hannah Bollar, Linshen Xiao, Hanming Zhang, Mariano Merchante, Sang Lee, Joe Klinger, Josh Nadel, Youssef Kamal Victor
-    </h3>
-    </div>
-
-<div class="w3-col theme">
-  <div class="w3-col" id="chapter" align = "center" width="20%">
-    <h1 class="fontTheme1">
-        Our Chapter
-    </h1>
-    <p class="sansserif"> 
-      Penn's SIGGRAPH Chapter is a computer graphics oriented group which focuses on fostering a community of students interested in animation, computer science, games and VFX. 
-      Some of SIGGRAPH's activities include a Demo Reel Night, weekly talks on computer graphics topics, tutorials, and movie nights.
-    </p>
   </div>
+
+  <!-- Image Header -->
+  <div class="w3-display-container w3-animate-opacity">
+    <img src="res/header.png" alt="header" style=" width:100%; align-content:center; min-height:10%; max-height:100%;">
+  </div>
+<div class="scrollmenu">
+  <img id="myImg1" src="res/slide_photos/MylesAndOthers.jpeg" alt="1" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img id="myImg2" src="res/slide_photos/Alex McCraw.png" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img id="myImg3" src="res/slide_photos/JackyLu.jpg" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img src="res/slide_photos/FeliciaChen.png" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img src="res/slide_photos/Kathryn Miller.jpeg" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img src="res/slide_photos/Kathryn,Myles,Grace.png" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img src="res/slide_photos/Grace Gilbert.png" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img src="res/slide_photos/Joe Klinger.png" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img src="res/slide_photos/LinshenXiao_and_HanmingZhang.png" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img src="res/slide_photos/Byumjin_Kim2.png" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img src="res/slide_photos/Josh Nadel.jpg" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img src="res/slide_photos/AliyaChen.png" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img src="res/slide_photos/Sang.png" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img src="res/slide_photos/Byumjin_Kim.png" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img src="res/slide_photos/HannahBollar.png" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
+  <img src="res/slide_photos/mariano-merchante-comp-final-fixed.jpg" style=" width:10%; align-content:center; min-height:10%; max-height:100%;">
 </div>
 
-<div class="w3-row-padding theme backgroundBlack" id="works" align = "center">
-  <!-- <div class="w3-quarter"> -->
-      <h1 class="fontTheme1">
-        Student Works
+  <!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById('myModal');
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById('myImg1');
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+      modal.style.display = "none";
+  }
+  </script>
+
+</div>
+  <div class="w3-col smallTheme">
+    <div class="w3-col" align="center" width="40%">
+      <h3 class="smallTheme">
+        Featuring from left to right:
+      </h3>
+      <h3 class="smallTheme">
+        Myles Al Yafei, Josh Nadel, Mabel Ogiriki & Youssef Kamal Victor, Grace Gilbert, Josh Nadel; Alex McCraw, Joe Klinger, Aliya
+        Chen; Jacky Lu, Sang Lee; Felicia Chen, Byumjin Kim; Kathryn Miller & Linshen Xiao & Hanming Zhang, Hannah Bollar,
+        Myles Al Yafei & Grace Gilbert & Kathryn Miller; Byumjin Kim, Mariano Merchante;
+      </h3>
+    </div>
+  </div>
+
+  <div class="w3-col backgroundWhite" style="padding: 40px 40px">
+    <div class="w3-col" id="chapter" align="center" width="20%">
+      <h1 class="fontThemeBlack">
+        Our Chapter
       </h1>
-        <p class="sansserif">
-          Impressive Reel of DMD and CGGT Students at University of Pennsylvania
-        </p>
-      
-      <head>
+      <p class="sansserif">
+        Penn's SIGGRAPH Chapter is a computer graphics oriented group which focuses on fostering a community of students interested
+        in animation, computer science, games and VFX. Some of SIGGRAPH's activities include a Demo Reel Night, weekly talks
+        on computer graphics topics, tutorials, and movie nights.
+      </p>
+    </div>
+  </div>
+
+  <div class="w3-row-padding theme backgroundBlack" id="works" align="center" >
+    <!-- <div class="w3-quarter"> -->
+    <h1 class="fontTheme1" style="padding:10% 10px 10px 10px">
+      Student Works
+    </h1>
+
+    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <style>
-      * {box-sizing: border-box}
-      body {font-family: Verdana, sans-serif; margin:0}
-      .mySlides {display: none}
-      img {vertical-align: middle;}
-      
-      /* Slideshow container */
-      .slideshow-container {
-        max-width: 100%;
-        position: relative;
-        margin: auto;
-      }
-      
-      /* Next & previous buttons */
-      .prev, .next {
-        cursor: pointer;
-        position: 100%;
-        top: 90%;
-        width: auto;
-        padding: 2%;
-        color: white;
-        font-weight: bold;
-        font-size: 100%;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-      }
-      
-      /* Position the "next button" to the right */
-      .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
-      
-      /* On hover, add a black background color with a little bit see-through */
-      .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-      }
-      
-      /* Caption text */
-      .text {
-        color: #f2f2f2;
-        font-size: 100%;
-        padding: 8px 12px;
-        position: absolute;
-        top: 115%;
-        width: 100%;
-        text-align: center;
-      }
-      
-      /* Number text (1/3 etc) */
-      .numbertext {
-        color: #f2f2f2;
-        font-size: 100%;
-        padding: 0% 0%;
-        position: absolute;
-        top: 0;
-      }
-      
-      /* The dots/bullets/indicators */
-      .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 70%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
-      
-      .active, .dot:hover {
-        background-color: #717171;
-      }
-      
-      /* Fading animation */
-      .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
-      }
-      
-      @-webkit-keyframes fade {
-        from {opacity: .4} 
-        to {opacity: 1}
-      }
-      
-      @keyframes fade {
-        from {opacity: .4} 
-        to {opacity: 1}
-      }
-      
-      /* On smaller screens, decrease text size */
-      @media only screen and (max-width: 300px) {
-        .prev, .next,.text {font-size: 100%}
-      }
+        * {
+          box-sizing: border-box
+        }
+
+        body {
+          font-family: Verdana, sans-serif;
+          margin: 0
+        }
+
+        .mySlides {
+          display: none
+        }
+
+        img {
+          vertical-align: middle;
+        }
+
+        /* Slideshow container */
+
+        .slideshow-container {
+          max-width: 100%;
+          position: relative;
+          margin: auto;
+        }
+
+        /* Next & previous buttons */
+
+        .prev,
+        .next {
+          cursor: pointer;
+          position: 100%;
+          top: 90%;
+          width: auto;
+          padding: 2%;
+          color: white;
+          font-weight: bold;
+          font-size: 100%;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+        }
+
+        /* Position the "next button" to the right */
+
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+
+        .text {
+          color: #f2f2f2;
+          font-size: 100%;
+          padding: 8px 12px;
+          position: absolute;
+          top: 115%;
+          width: 100%;
+          text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 100%;
+          padding: 0% 0%;
+          position: absolute;
+          top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 70%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+          background-color: #717171;
+        }
+
+        /* Fading animation */
+
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+          from {
+            opacity: .4
+          }
+          to {
+            opacity: 1
+          }
+        }
+
+        @keyframes fade {
+          from {
+            opacity: .4
+          }
+          to {
+            opacity: 1
+          }
+        }
+
+        /* On smaller screens, decrease text size */
+
+        @media only screen and (max-width: 300px) {
+          .prev,
+          .next,
+          .text {
+            font-size: 100%
+          }
+        }
       </style>
-      </head>
-      <body>
-      
+    </head>
+
+    <body>
+
       <div class="slideshow-container">
-      
-      <!-- <div class="mySlides fade">
-           <div class="numbertext">1 / 3</div> 
-        <video width="90%" height="90%" controls autoplay>
-              <source src="res/video.mov" type="video/mp4">
-          </video>
-        <div class="text">Caption one</div>
-      </div> --> 
-      
-      <div class="mySlides fade">
-          <div style="padding:56.25% 0 0 0;position:relative;">
-            <iframe src="https://player.vimeo.com/video/286117660?autoplay=1&portrait=0" 
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                    frameborder="0" 
-                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
-            </iframe>
-          </div><script src="https://player.vimeo.com/api/player.js"></script>
+
+        <div class="mySlides fade">
+          <p class="sansserif" style="font-size: 30px; padding: 5px">
+            Reconstructing the Past (2017)
+          </p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/S2JKr-mh9pA?rel=0&amp;controls=0" frameborder="0" allow="autoplay; encrypted-media">
+          </iframe>
           <p class="sansserif">
-            Simulated using Houdini&#039;s grains, wire, and bullet solvers. <br />
-          Responsible for all aspects except for the gazebo model.<br />
-          Special thanks to Chris Friesen and Tim Sepulveda for their amazing teachings and inspiration.</p>
-      </div>
-    
-      
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      
+            Group research project directed by Dr. Norm Badler and Dr. Clark Erickson to accurately reconstruct a depiction of the hydraulic
+            landscape of Pre-Colombian Baures, Bolivia. The project spanned for 3 months (May - July 2017). As the group
+            leader and manager, I worked on communicating between the professors and the group, setting goals, setting up
+            and populating the landscape, working with and improving motion capture data for animation, as well as artificial
+            intelligence for the on land characters.
+            <br>
+            <br> Credit: Emiliya al Yafei, Sacha Best, Andres De Los Rios, Estee Ellis, Jack Gindi, Gregory M. Howard, Sangeun
+            Lee, Tunika Onnekikami, James G. Prell, Siyona Revi, Chloe Snyder, Lucas Tai-Macarthur, Samantha Warrick, Ben
+            Yang, Joshua Nadel, Youssef Victor, Mabel Ogiriki
+            <br>
+            <br> Medium: Unreal Engine 4, Maya, MotionBuilder, Adobe Design suite, USGS Earth Explorer
+          </p>
+        </div>
+
+        <div class="mySlides fade">
+          <p class="sansserif" style="font-size: 30px; padding: 5px">
+            Pathtracer Metal Spheres: Physically-based Rendering
+          </p>
+          <img width="90%" height="90%" controls autoplay>
+          <img src="res/slide_photos/Alex McCraw.png" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity">
+          </img>
+          <p class="sansserif">
+            Physically-based path trace rendered spheres with varying metal reflective properties.
+            <br>
+            <br>Credit: Alex McCraw
+            <br>
+            <br> Medium: C++
+          </p>
+        </div>
+
+        <div class="mySlides fade">
+          <p class="sansserif" style="font-size: 30px; padding: 5px">
+            Poppies
+          </p>
+          <img width="90%" height="90%" controls autoplay>
+          <img src="res/slide_photos/FeliciaChen.png" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity"> </img>
+          <p class="sansserif">
+            Garden Painting: California poppies
+            <br>
+            <br> Credit: Felicia Chen
+            <br>
+            <br> Medium: Photoshop
+          </p>
+        </div>
+
+        <div class="mySlides fade">
+          <p class="sansserif" style="font-size: 30px; padding: 5px">
+            Procedural Tree: L-System Tree
+          </p>
+          <img width="90%" height="90%" controls autoplay>
+          <img src="res/slide_photos/Kathryn Miller.jpeg" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity"> </img>
+          <p class="sansserif">
+            A procedural tree generator using L systems.
+            <br>
+            <br> Credit: Kathryn Miller
+            <br>
+            <br> Medium: WebGL. Typescript
+          </p>
+        </div>
+
+        <div class="mySlides fade">
+          <p class="sansserif" style="font-size: 30px; padding: 5px">
+            Candyland Minecraft: Candyland Minecraft
+          </p>
+          <img width="90%" height="90%" controls autoplay>
+          <img src="res/slide_photos/Kathryn,Myles,Grace.png" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity"> </img>
+          <p class="sansserif">
+            A simplified version of Minecraft that is candy land themed. Features include procedural terrain, river and cloud generation,
+            animated textures, interaction with the environment, shadow mapping, and a travelling Alpaca.
+            <br>
+            <br> Credit: Kathryn Miller, Emiliya al Yafei, Grace Gilbert
+            <br>
+            <br> Medium: C++, GLSL
+          </p>
+        </div>
+
+        <div class="mySlides fade">
+          <p class="sansserif" style="font-size: 30px; padding: 5px">
+            Candyland Minecraft: Candyland Minecraft
+          </p>
+          <img width="90%" height="90%" controls autoplay>
+          <img src="res/slide_photos/Grace Gilbert.png" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity"> </img>
+          <p class="sansserif">
+            A realistic, expressive eye simulation that behaves according to emotion and behavior patterns.
+            <br>
+            <br> Credit: Grace Gilbert, Christine Fu, Xuan Huang
+            <br>
+            <br> Medium: Maya, Python, Houdini
+          </p>
+        </div>
+
+        <div class="mySlides fade">
+          <p class="sansserif" style="font-size: 30px; padding: 5px">
+
+            Galaxy, Nebula and Stars Shader : Galaxy Shader
+
+          </p>
+          <img width="90%" height="90%" controls autoplay>
+          <img src="res/slide_photos/Joe Klinger.png" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity"> </img>
+          <p class="sansserif">
+
+            A fully procedurally-generated galaxy that was made with fractal noise and some other cool math.
+            <br>
+            <br> Credit: Joseph Klinger
+            <br>
+            <br> Medium: GLSL, ShaderToy
+          </p>
+        </div>
+
+        <div class="mySlides fade">
+          <p class="sansserif" style="font-size: 30px; padding: 5px">
+            Procedural Desert : Procedural Desert
+          </p>
+          <img width="90%" height="90%" controls autoplay>
+          <img src="res/slide_photos/LinshenXiao_and_HanmingZhang.png" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity"> </img>
+          <p class="sansserif">
+
+            The goal of this project is to create an environment that feels responsive and alive. We wanted to create an animated environment
+            with interactive procedural animations and models. We were motivated by games like Jounery and DreamTank.
+            <br>
+            <br> Credit: Linshen Xiao and Hanming Zhang
+            <br>
+            <br> Medium: WebGL
+          </p>
+        </div>
+
+        <div class="mySlides fade">
+          <p class="sansserif" style="font-size: 30px; padding: 5px">
+            Josh's Character : Phantom Lancer
+
+          </p>
+          <img width="90%" height="90%" controls autoplay>
+          <img src="res/slide_photos/Josh Nadel.jpg" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity"> </img>
+          <p class="sansserif">
+
+            A high-definition portrait model of Phantom Lancer from the game Dota 2. Heavy emphasis on facial anatomy and sculptural
+            detail.
+
+            <br>
+            <br> Credit: Josh Nadel
+            <br>
+            <br> Medium: Maya, ZBrush, Arnold
+
+          </p>
+        </div>
+
+        <div class="mySlides fade">
+          <p class="sansserif" style="font-size: 30px; padding: 5px">
+            Dragon : There are a Million
+          </p>
+          <img width="90%" height="90%" controls autoplay>
+          <img src="res/slide_photos/Byumjin_Kim2.png" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity"> </img>
+          <p class="sansserif">
+            GPU particle system using WebGL2
+            <br>
+            <br> Credit: Byumjin Kim
+            <br>
+            <br> Medium: WebGL
+          </p>
+        </div>
+
+        <div class="mySlides fade">
+          <p class="sansserif" style="font-size: 30px; padding: 5px">
+            Photon Mapped Dragon : Photon Mapper
+          </p>
+          <img width="90%" height="90%" controls autoplay>
+          <img src="res/slide_photos/HannahBollar.png" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity"> </img>
+          <p class="sansserif">
+            Monte Carlo Pathtracer complete with a Full Lighting Integrator, a BVH acceleration structure, multiple importance sampling,
+            global illumination, focal distance changes, different light source types (point, spot, area), and photon mapping.
+            <br>
+            <br> Credit: Hannah Bollar
+            <br>
+            <br> Medium: C++
+          </p>
+        </div>
+
+
+        <div class="mySlides fade">
+          <p class="sansserif" style="font-size: 30px; padding: 5px">
+            Row Houses : Deconstruction
+          </p>
+          <img width="90%" height="90%" controls autoplay>
+          <img src="res/slide_photos/mariano-merchante-comp-final-fixed.jpg" align="center" style="height: 100%;" class="w3-card-4 w3-hover-opacity"> </img>
+          <p class="sansserif">
+            A course project with the objective of reproducing a photograph. The reference image is a picture I took in Philadelphia.
+            A lot of care was taken to match the camera perspective, the correct illumination of that specific day and time,
+            the shadow silhouette of objects out of the frame, the reflections of the windows and the lighting contribution
+            of the environment, and of course the models and surfaces in general. All the materials, except the street sign
+            and one projected mural, are procedural materials made with Redshift nodes in Maya.
+
+            <br>
+            <br> Credit: Mariano Merchante
+
+            <br>
+            <br> Medium: Maya, Redshift, Photoshop
+
+          </p>
+        </div>
+
+        <a class="prev" style="text-align:center; padding: 5px 5px 5px 5px" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" style="text-align:center; padding: 5px 5px 5px 5px" onclick="plusSlides(1)">&#10095;</a>
+
       </div>
       <br>
-      
-      <div style="text-align:center">
+
+      <!-- <div style="text-align:center; padding: 0px 0px 10% 0px">
         <span class="dot" onclick="currentSlide(1)"></span> 
         <span class="dot" onclick="currentSlide(2)"></span> 
         <span class="dot" onclick="currentSlide(3)"></span> 
-      </div>
-      
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+
+      </div> -->
       <script>
-         var slideIndex = 1;
-showSlides(slideIndex);
+        var slideIndex = 1;
+        showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-}
-</script>
-      
-</div>
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = slides.length }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+
+  </div>
 
 
   <!-- board Container -->
-  <div class="w3-center backgroundWhite"  width="45%" id="board" style="padding:3% 5% 5% 5%">
-    <h1 class="fontThemeBlack" style="padding:3% 5% 5% 5%" >
+  <div class="w3-center backgroundWhite" width="45%" id="board" style="padding:3% 5% 5% 5%">
+    <h1 class="fontThemeBlack" style="padding:3% 5% 0% 5%">
       MEET THE BOARD
     </h1>
-  
+    <h2 style="font-size: 20px">
+      Click on image for links
+    </h2>
+
     <div class="w3-row" style="padding:1% 5% 10% 5%">
-      <div class="w3-quarter" >
-          <img src="res/Bollar.jpg" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity">
-          <h3 class= "fontTheme2"> Hannah Bollar</h3>
-          <h3 class= "fontTheme1">President</h3>
-          <h3 class= "fontTheme1"style=" font-size: 15px;" >hbollar@seas.upenn.edu</h3>
+      <div class="w3-quarter">
+        <a href="http://hannahbollar.com" target="_blank">
+          <img src="res/Bollar.jpg" align="center" style="width:60%" class="w3-card-4 w3-hover-opacity">
+        </a>
+        <h3 class="fontTheme2"> Hannah Bollar </h3>
+        <h3 class="fontTheme1">President</h3>
+        <h3 class="fontTheme1" style=" font-size: 15px;">hbollar@seas.upenn.edu</h3>
       </div>
 
-      <div class="w3-quarter" >
+      <div class="w3-quarter">
+        <a href="http://www.emiliyafei.com"  target="_blank">
           <img src="res/alyafei.png" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity">
-          <h3 class= "fontTheme2">Myles Al Yafei</h3>
-          <h3 class= "fontTheme1">Vice President</h3>
-          <h3 class= "fontTheme1"style="font-size: 15px;" >alyafei@seas.upenn.edu</h3>
+        </a>
+        <h3 class="fontTheme2">Myles Al Yafei</h3>
+        <h3 class="fontTheme1">Vice President</h3>
+        <h3 class="fontTheme1" style="font-size: 15px;">alyafei@seas.upenn.edu</h3>
       </div>
 
       <div class=" w3-quarter">
-          <img src="res/Lachanski.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
-          <h3 class= "fontTheme2">Caroline Lachanski</h3>
-          <h3 class= "fontTheme1">Secretary</h3>
-          <h3 class= "fontTheme1"style=" font-size: 15px;" >clach@seas.upenn.edu</h3> 
+          <a href="http://carolinelachanski.com/">
+            <img src="res/Lachanski.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
+            </a>
+        <h3 class="fontTheme2">Caroline Lachanski</h3>
+        <h3 class="fontTheme1">Secretary</h3>
+        <h3 class="fontTheme1" style=" font-size: 15px;">clach@seas.upenn.edu</h3>
       </div>
 
-      <div class=" w3-quarter ">
-          <img src="res/Canarick.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
-          <h3 class= "fontTheme2">Adam Canarick</h3>
-          <h3 class= "fontTheme1">Treasurer</h3>
-          <h3 class= "fontTheme1"style=" font-size: 15px;" >canarick@seas.upenn.edu</h3> 
-      </div>
-    </div>
-
-  <div class="w3-row" style="padding:1% 5% 5% 5%">
-      <div class="w3-quarter">
-          <img src="res/Lee.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
-        <h3 class= "fontTheme2">Sangeun Lee</h3>
-        <h3 class= "fontTheme1">Web-Master</h3>
-        <h3 class= "fontTheme1"style=" font-size: 15px;" >eunsang@seas.upenn.edu</h3> 
-      </div>
-
-      <div class="w3-quarter">
-          <img src="res/Jang.png" style="width:55%" class="w3-card-4 w3-hover-opacity">
-        <h3 class= "fontTheme2">Nick Jang</h3>
-        <h3 class= "fontTheme1">Board Member</h3>
-        <h3 class= "fontTheme1" style=" font-size: 15px;" >nickjang@seas.upenn.edu</h3> 
-      </div>
-
-      <div class="w3-quarter">
-           <img src="res/gilbert.png" style="width:55%" class="w3-card-4 w3-hover-opacity">
-           <h3 class= "fontTheme2">Grace Gilbert</h3>
-           <h3 class= "fontTheme1">Board Member</h3>              
-           <h3 class= "fontTheme1"style=" font-size: 15px;">gilbert@seas.upenn.edu</h3>
-      </div>
-      
       <div class=" w3-quarter">
-            <img src="res/Lu.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
-            <h3 class= "fontTheme2">Jacky Lu</h3>
-            <h3 class= "fontTheme1">Board Member</h3>
-            <h3 class= "fontTheme1" style=" font-size: 15px;">jackylu@seas.upenn.edu</h3> 
+        <img src="res/Canarick.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
+        <h3 class="fontTheme2">Adam Canarick</h3>
+        <h3 class="fontTheme1">Treasurer</h3>
+        <h3 class="fontTheme1" style=" font-size: 15px;">canarick@seas.upenn.edu</h3>
+      </div>
+    </div>
+
+    <div class="w3-row" style="padding:1% 5% 5% 5%">
+      <div class="w3-quarter">
+          <a href="https://leesangeun.portfoliobox.net">
+        <img src="res/Lee.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
+      </a>
+        <h3 class="fontTheme2">Sangeun Lee</h3>
+        <h3 class="fontTheme1">Web-Master</h3>
+        <h3 class="fontTheme1" style=" font-size: 15px;">eunsang@seas.upenn.edu</h3>
       </div>
 
-    </div>
+      <div class="w3-quarter">
+        <img src="res/Jang.png" style="width:55%" class="w3-card-4 w3-hover-opacity">
+        <h3 class="fontTheme2">Nick Jang</h3>
+        <h3 class="fontTheme1">Board Member</h3>
+        <h3 class="fontTheme1" style=" font-size: 15px;">nickjang@seas.upenn.edu</h3>
+      </div>
+
+      <div class="w3-quarter">
+          <a href="https://vimeo.com/288299173" target="_blank">
+        <img src="res/gilbert.png" style="width:55%" class="w3-card-4 w3-hover-opacity">
+        </a>
+        <h3 class="fontTheme2">Grace Gilbert</h3>
+        <h3 class="fontTheme1">Board Member</h3>
+        <h3 class="fontTheme1" style=" font-size: 15px;">gilbert@seas.upenn.edu</h3>
+      </div>
+<!-- 
+      <div class=" w3-quarter">
+        <img src="res/Lu.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
+        <h3 class="fontTheme2">Jacky Lu</h3>
+        <h3 class="fontTheme1">Board Member</h3>
+        <h3 class="fontTheme1" style=" font-size: 15px;">jackylu@seas.upenn.edu</h3>
+      </div> -->
 
     </div>
-</div>
+
+  </div>
+  </div>
 
 
 
 
-<div class="background" align="center" id="agenda"> 
+  <div class="background" align="center" id="agenda">
     <h1 class="fontTheme2" style="color:white"> The Agenda </h1>
-  <div class="background w3-row" >
-      <img src="res/group.jpg" align="center" style="width:60%; padding: 1% 5% 5% 5%;">  
-      <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=900&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=7035r7o0237bslke3rov67s5j4%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FNew_York" 
-    height="350px" align="center" frameborder="0" style="padding: 1% 1%"scrolling="no">         </iframe> 
-  </div>
-  <div class="background w3-col" id="agenda" >
+    <div class="background w3-row">
+      <img src="res/group.jpg" align="center" style="width:60%; padding: 1% 5% 5% 5%;">
+      <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=900&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=7035r7o0237bslke3rov67s5j4%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FNew_York"
+        height="450px" align="center" frameborder="0" style="padding: 1% 1%" scrolling="no"> </iframe>
     </div>
-</div>
-
-
-<!-- Contact Container -->
-<div class="w3-container w3-padding-64 w3-theme-l5" padding:"50px"id="contact">
-  <div class="w3-row">
-    <div class="w3-col m5">
-    <div class="w3-padding-16">
-      <p class="sansserif w3-border-pale-blue w3-bottombar">Contact Us</p></div>
-      <p class="sansserif">Swing by for a cup of java!</p>
-      <p class="sansserif"><i class="fa fa-map-marker w3-text-blue"></i> SIGlab, Penn</p>
-      <p class="sansserif"><i class="fa fa-envelope-o w3-text-blue w3-xlarge"></i> upennacmsiggraph@gmail.com</p>
-    </div>
-    
-    <div class="w3-col m7">
-      <form class="w3-container w3-card-4 w3-padding-16 w3-white" 
-      action="mailto:upennacmsiggraph@gmail.com"
-      enctype="text/plain"> 
-      <!-- target="_blank"> -->
-      <div class="w3-section">      
-        <label class="sansserif">Name</label>
-        <input class="w3-input" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">      
-          <label class="sansserif">Email</label>
-        <input class="w3-input" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">      
-          <label class="sansserif">Message</label>
-        <input class="w3-input" type="text" name="Message" required>
-      </div>  
-      <button type="submit" class="newButton w3-right ">Send</button>
-      </form>
+    <div class="background w3-col" id="agenda">
     </div>
   </div>
-</div>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-32 theme w3-center">
-  <h1 class="fontTheme1" style="font-size: 25px; padding:5px;"> Follow Us </h1>
-  <a class="w3-button w3-large w3-blue" href="https://www.facebook.com/groups/161186224080072/" title="Facebook"><i class="fa fa-facebook"></i></a>
-  <a class="w3-button w3-large w3-blue" href="http://www.cg.cis.upenn.edu/" title="website"><i class="fa fa-handshake-o"></i></a>
-  <p class="sansserif" style="font-size: 15px">Powered by 
-    <label> W3 school and </label>
-    <a href="https://www.seas.upenn.edu/" target="_blank">Penn Engineering</a>
-  </p>
 
-  <div style="position:relative; bottom:100px; z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding theme w3-hide-small">
-      Go To Top
-    </span>   
-    
-    <a class="w3-button w3-theme" href="#myPage">
-      <span class="w3-xlarge">
-        <i class="fa fa-chevron-circle-up"></i>
+  <!-- Contact Container -->
+  <div class="w3-container w3-padding-64 w3-theme-l5" padding: "50px"id="contact">
+    <div class="w3-row">
+      <div class="w3-col m5">
+        <div class="w3-padding-16">
+          <p class="sansserif w3-border-pale-blue w3-bottombar">Contact Us</p>
+        </div>
+        <p class="sansserif">Swing by for a cup of java(script)!</p>
+        <p class="sansserif">
+          <i class="fa fa-map-marker w3-text-blue"></i> SIGlab, Penn</p>
+        <p class="sansserif">
+          <i class="fa fa-envelope-o w3-text-blue w3-xlarge"></i> upennacmsiggraph@gmail.com</p>
+      </div>
+
+      <div class="w3-col m7">
+        <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="mailto:upennacmsiggraph@gmail.com" enctype="text/plain">
+          <!-- target="_blank"> -->
+          <div class="w3-section">
+            <label class="sansserif">Name</label>
+            <input class="w3-input" type="text" name="Name" required>
+          </div>
+          <div class="w3-section">
+            <label class="sansserif">Email</label>
+            <input class="w3-input" type="text" name="Email" required>
+          </div>
+          <div class="w3-section">
+            <label class="sansserif">Message</label>
+            <input class="w3-input" type="text" name="Message" required>
+          </div>
+          <button type="submit" class="newButton w3-right ">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 theme w3-center">
+    <h1 class="fontTheme1" style="font-size: 25px; padding:5px;"> Follow Us </h1>
+    <a class="w3-button w3-large w3-blue" href="https://www.facebook.com/groups/161186224080072/" title="Facebook">
+      <i class="fa fa-facebook"></i>
+    </a>
+    <a class="w3-button w3-large w3-blue" href="http://www.cg.cis.upenn.edu/" title="website">
+      <i class="fa fa-handshake-o"></i>
+    </a>
+    <p class="sansserif" style="font-size: 15px">Powered by
+      <label> W3 school and </label>
+      <a href="https://www.seas.upenn.edu/" target="_blank">Penn Engineering</a>
+    </p>
+
+    <div style="position:relative; bottom:100px; z-index:1;" class="w3-tooltip w3-right">
+      <span class="w3-text w3-padding theme w3-hide-small">
+        Go To Top
       </span>
-  </a>
-  </div>
-</footer> 
 
-<script>
-// Script for side navigation
-// function w3_open() {
-//     var x = document.getElementById("mySidebar");
-//     x.style.width = "300px";
-//     x.style.paddingTop = "10%";
-//     x.style.display = "block";
-// }
+      <a class="w3-button w3-theme" href="#myPage">
+        <span class="w3-xlarge">
+          <i class="fa fa-chevron-circle-up"></i>
+        </span>
+      </a>
+    </div>
+  </footer>
 
-// Close side navigation
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-}
+  <script>
+    // Script for side navigation
+    // function w3_open() {
+    //     var x = document.getElementById("mySidebar");
+    //     x.style.width = "300px";
+    //     x.style.paddingTop = "10%";
+    //     x.style.display = "block";
+    // }
 
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
+    // Close side navigation
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
     }
-}
-</script>
 
-</body>
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+
+  </body>
+
 </html>

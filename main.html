@@ -83,11 +83,32 @@
     #caption {
       margin: auto;
       display: block;
-      width: 80%;
+      width: 100%;
       max-width: 700px;
       text-align: center;
       color: #ccc;
-      padding: 10px 0;
+      padding: 5px 10px 10px 10px;
+      height: 150px;
+      white-space: pre-line;
+      white-space: pre-wrap;
+
+    }
+    #just-line-break {
+  white-space: pre-line;
+  }
+  #line-break-and-tab {
+  white-space: pre-wrap;
+}
+
+    #title {
+      margin: auto;
+      font-size: 20px;
+      display: block;
+      width: 100%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0 10px 10px;
       height: 150px;
     }
 
@@ -95,6 +116,21 @@
 
     .modal-content,
     #caption {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    .modal-content,
+    #title {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+    .modal-content,
+    #credit {
       -webkit-animation-name: zoom;
       -webkit-animation-duration: 0.6s;
       animation-name: zoom;
@@ -240,6 +276,7 @@
 
     }
   </style>
+
   <style>
     h1.fontTheme1 {
       font-family: 'Open Sans', sans-serif;
@@ -382,7 +419,7 @@
       background-color: #000000;
       margin: auto;
       padding: 0;
-      width: 40%;
+      width: 70%;
       max-width: 50%;
     }
 
@@ -404,7 +441,7 @@
       cursor: pointer;
     }
 
-    .slides {
+    .mySlides {
       display: none;
     }
 
@@ -462,9 +499,10 @@
     .caption-container {
       text-align: center;
       background-color: black;
-      padding: 2px 16px;
+      padding: 2px 16px 10px 15px;
       color: white;
     }
+
 
     .demo {
       opacity: 0.6;
@@ -505,68 +543,69 @@
       <img src="res/slide_photos/mariano-merchante-comp-final-fixed.jpg" style=" width:10%; align-content:center; min-height:10%; max-height:100%;" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
     </div>
 
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal" style="padding:10px 10px">
       <span class="close cursor" onclick="closeModal()">&times;</span>
       <div class="modal-content">
+          <p id="title"></p>
 
-        <div class="slides">
-          <img src="res/slide_photos/MylesAndOthers.jpeg" style="width:100%;">
+        <div class="mySlides">
+          <img src="res/slide_photos/MylesAndOthers.jpeg" style="width:100%">
         </div>
 
-        <div class="slides">
+        <div class="mySlides">
           <img src="res/slide_photos/Alex McCraw.png" style="width:100%">
         </div>
 
-        <div class="slides">
+        <div class="mySlides">
           <img src="res/slide_photos/JackyLu.jpg" style="width:100%">
         </div>
 
-        <div class="slides">
+        <div class="mySlides">
           <img src="res/slide_photos/FeliciaChen.png" style="width:100%">
         </div>
 
-        <div class="slides">
+        <div class="mySlides">
           <img src="res/slide_photos/Kathryn Miller.jpeg" style="width:100%">
         </div>
 
-        <div class="slides">
+        <div class="mySlides">
           <img src="res/slide_photos/Kathryn,Myles,Grace.png" style="width:100%">
         </div>
 
-        <div class="slides">
+        <div class="mySlides">
           <img src="res/slide_photos/Grace Gilbert.png" style="width:100%">
         </div>
 
-        <div class="slides">
+        <div class="mySlides">
           <img src="res/slide_photos/Joe Klinger.png" style="width:100%">
         </div>
 
-        <div class="slides">
+        <div class="mySlides">
           <img src="res/slide_photos/LinshenXiao_and_HanmingZhang.png" style="width:100%">
         </div>
 
-        <div class="slides">
+        <div class="mySlides">
             <img src="res/slide_photos/Byumjin_Kim2.png" style="width:100%">
           </div>
 
-          <div class="slides">
+          <div class="mySlides">
               <img src="res/slide_photos/Josh Nadel.jpg" style="width:100%">
             </div>
 
-            <div class="slides">
+            <div class="mySlides">
                 <img src="res/slide_photos/AliyaChen.png" style="width:100%">
               </div>
 
-              <div class="slides">
+              <div class="mySlides">
                   <img src="res/slide_photos/Sang.png" style="width:100%">
                 </div>
-                <div class="slides">
+                <div class="mySlides">
                     <img src="res/slide_photos/Byumjin_Kim.png" style="width:100%">
                   </div>
-                  <div class="slides">
+                  <div class="mySlides">
                       <img src="res/slide_photos/HannahBollar.png" style="width:100%">
                     </div>
-                    <div class="slides">
+                    <div class="mySlides">
                         <img src="res/slide_photos/mariano-merchante-comp-final-fixed.jpg" style="width:100%">
                       </div>
 
@@ -574,54 +613,123 @@
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
         <div class="caption-container">
-          <p id="caption"></p>
+          <p id="just-line-break"></p>
         </div>
 
 
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/MylesAndOthers.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Credit: Myles Al Yafei, Josh Nadel & Youssef V Kamal">
+            <span style="white-space: pre-line">@Model.CommentText</span>
+            <img class="demo cursor" src="res/slide_photos/MylesAndOthers.jpeg" style="width:100%" onclick="currentSlide(1)" 
+          title="Bolivia: Reconstructing the Past (2017) &#13;&#10; [Unreal Engine 4, Maya, MotionBuilder, Adobe Design suite, USGS Earth Explorer]" 
+          alt= "Group research project directed by Dr. Norman Badler and Dr. Clark Erickson to accurately reconstruct a depiction of the hydraulic landscape of Pre-Colombian Baures, Bolivia.  The goal of this project was to be able to create an interactive virtual environment that could be used to educate audiences about the time and location.  The project is still in progress and has a class, CIS 106, dedicated to it. Full Video available here: https://www.youtube.com/watch?v=S2JKr-mh9pA Credit: Myles Al Yafei, Josh Nadel & Youssef V Kamal">
+          <p id="para"> group </p>
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Alex McCraw.png" style="width:100%" onclick="currentSlide(2)" alt="Credit: Alex McCraw">
+          <img class="demo cursor" src="res/slide_photos/Alex McCraw.png" style="width:100%" onclick="currentSlide(2)" 
+          title="Pathtracer Metal Spheres: Physically-based Rendering [C++]"
+          alt="Physically-based path trace rendered spheres with varying metal reflective properties.
+          Credit: Alex McCraw">
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/JackyLu.jpg" style="width:100%" onclick="currentSlide(3)" alt="Credit: Jacky Lu">
+          <img class="demo cursor" src="res/slide_photos/JackyLu.jpg" style="width:100%" onclick="currentSlide(3)" 
+          title="Juice Spiral [Houdini]"
+          alt="Full CGI TV commercial for Êërįkåškø juice
+          Responsible for all aspects except for bottle's texture pattern design. Source: https://vimeo.com/212633577 Credit: Jacky Lu">
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/FeliciaChen.png" style="width:100%" onclick="currentSlide(4)" alt="Credit: Felicia Chen">
+          <img class="demo cursor" src="res/slide_photos/FeliciaChen.png" style="width:100%" onclick="currentSlide(4)" 
+          title="Garden Painting: Poppies [Photoshop]"
+          alt="
+          California poppies.
+           Credit: Felicia Chen">
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Kathryn Miller.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Credit: Kathryn Miller">
+          <img class="demo cursor" src="res/slide_photos/Kathryn Miller.jpeg" style="width:100%" onclick="currentSlide(5)" 
+          title="Procedural Tree: L-System Tree [WebGL. Typescript ]"
+          alt="
+          A procedural tree generator using L systems.
+          Credit: Kathryn Miller">
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Kathryn,Myles,Grace.png" style="width:100%" onclick="currentSlide(6)" alt="Credit: Kathryn Miller, Myles Al Yafei, Grace Gilbert">
+          <img class="demo cursor" src="res/slide_photos/Kathryn,Myles,Grace.png" style="width:100%" onclick="currentSlide(6)" 
+          title="MineCraft: CandyLand [
+          C++, GLSL
+          ]"
+          alt="A simplified version of Minecraft that is candy land themed.  Features include procedural terrain, river and cloud generation, animated textures, interaction with the environment, shadow mapping, and a travelling Alpaca.
+           Credit: Kathryn Miller, Myles Al Yafei, Grace Gilbert">
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Grace Gilbert.png" style="width:100%" onclick="currentSlide(7)" alt="Credit: Grace Gilbert">
+          <img class="demo cursor" src="res/slide_photos/Grace Gilbert.png" style="width:100%" onclick="currentSlide(7)" 
+          title="
+          Research: Eye Simulation
+          [
+          Maya, Python, Houdini
+          ]"
+          alt="
+          A realistic, expressive eye simulation that behaves according to emotion and behavior patterns.  
+           Credit: 
+          Grace Gilbert, Christine Fu, Xuan Huang
+          ">
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Joe Klinger.png" style="width:100%" onclick="currentSlide(8)" alt="Credit: Joe Klinger">
+          <img class="demo cursor" src="res/slide_photos/Joe Klinger.png" style="width:100%" onclick="currentSlide(8)" 
+          title="
+          Galaxy, Nebula and Stars Shader: Galaxy Shader [GLSL, ShaderToy]
+          "
+          alt="
+          A fully procedurally-generated galaxy that was made with fractal noise and some other cool math.
+           Credit: Joe Klinger">
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/LinshenXiao_and_HanmingZhang.png" style="width:100%" onclick="currentSlide(9)" alt="Credit: Linshen Xiao & Hanming Zhang">
+          <img class="demo cursor" src="res/slide_photos/LinshenXiao_and_HanmingZhang.png" style="width:100%" onclick="currentSlide(9)" 
+          title="
+          Procedural Desert [WebGL]
+          "
+          alt="The goal of this project is to create an environment that feels responsive and alive.  We wanted to create an animated environment with interactive procedural animations and models. We were motivated by games like Jounery and DreamTank.
+          Credit: Linshen Xiao & Hanming Zhang">
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Byumjin_Kim2.png" style="width:100%" onclick="currentSlide(10)" alt="Credit: Byumjin Kim">
+          <img class="demo cursor" src="res/slide_photos/Byumjin_Kim2.png" style="width:100%" onclick="currentSlide(10)" 
+          title="Dragon: There are a million [WebGL]"
+          alt="
+          GPU particle system using WebGL2
+           Credit: Byumjin Kim">
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Josh Nadel.jpg" style="width:100%" onclick="currentSlide(11)" alt="Credit: Josh Nadel">
+          <img class="demo cursor" src="res/slide_photos/Josh Nadel.jpg" style="width:100%" onclick="currentSlide(11)" 
+          title="Character: Phantom Lancer [Maya, ZBrush, Arnold]"
+          alt="
+          A high-definition portrait model of Phantom Lancer from the game Dota 2. Heavy emphasis on facial anatomy and sculptural detail.
+           Credit: Josh Nadel">
         </div>
         <div class="column">
-            <img class="demo cursor" src="res/slide_photos/AliyaChen.png" style="width:100%" onclick="currentSlide(12)" alt="Credit: Aliya Chen">
+            <img class="demo cursor" src="res/slide_photos/AliyaChen.png" style="width:100%" onclick="currentSlide(12)" 
+            title="Dragon Painting: Follow [Photoshop]"
+            alt="
+            Inspired by a summer hike and my fascination with dragons.
+             Credit: Aliya Chen">
           </div>
           <div class="column">
-              <img class="demo cursor" src="res/slide_photos/Sang.png" style="width:100%" onclick="currentSlide(13)" alt="Credit: Sang Lee">
+              <img class="demo cursor" src="res/slide_photos/Sang.png" style="width:100%" onclick="currentSlide(13)" 
+              title="Procedural Planet: Heart [WebGL]"
+              alt="Heart created out of math. There are two lonely bunny moons revolving around the damaged heart. Credit: Sang Lee">
             </div>
             <div class="column">
-                <img class="demo cursor" src="res/slide_photos/Byumjin_Kim.png" style="width:100%" onclick="currentSlide(14)" alt="Credit: Byumjin Kim">
+                <img class="demo cursor" src="res/slide_photos/Byumjin_Kim.png" style="width:100%" onclick="currentSlide(14)" 
+                title="
+                Procedural Duck: Duck Never Fly [WebGL]
+                "
+                alt="
+                Using SDF(signed distance function)s and toon shading, I created the duck referred to in a GIF reference image.  
+                 Credit: Byumjin Kim">
               </div>
               <div class="column">
-                  <img class="demo cursor" src="res/slide_photos/HannahBollar.png" style="width:100%" onclick="currentSlide(15)" alt="Credit: Hannah Bollar">
+                  <img class="demo cursor" src="res/slide_photos/HannahBollar.png" style="width:100%" onclick="currentSlide(15)" 
+                  title="
+                  Photon Mapped Dragon: Photon Mapper [C++]
+                  "
+                  alt="Monte Carlo Pathtracer complete with a Full Lighting Integrator, a BVH acceleration structure, multiple importance sampling, global illumination, focal distance changes, different light source types (point, spot, area), and photon mapping.
+                   Credit: Hannah Bollar">
                 </div>
                 <div class="column">
                     <img class="demo cursor" src="res/slide_photos/mariano-merchante-comp-final-fixed.jpg" style="width:100%" onclick="currentSlide(16)" alt="Credit: Mariano Merchante">
@@ -645,20 +753,21 @@
         showSlides(slideIndex += n);
       }
 
-      function currentSlide1(n) {
+      function currentSlide(n) {
         showSlides(slideIndex = n);
       }
 
       function showSlides(n) {
         var i;
-        var slides = document.getElementsByClassName("slides");
+        var slides = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("demo");
-        var captionText = document.getElementById("caption");
-        if (n > slides.length) { 
-          slideIndex = 1 
+        var titleText = document.getElementById("title");
+        var captionText = document.getElementById("just-line-break");
+        if (n > slides.length) {
+          slideIndex = 1
         }
-        if (n < 1) { 
-          slideIndex = slides.length 
+        if (n < 1) {
+          slideIndex = slides.length
         }
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
@@ -666,10 +775,11 @@
         for (i = 0; i < dots.length; i++) {
           dots[i].className = dots[i].className.replace(" active", "");
         }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        captionText.innerHTML = dots[slideIndex - 1].alt;
-      }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        titleText.innerHTML = dots[slideIndex-1].title;
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
     </script>
 
   </body>
@@ -1153,7 +1263,7 @@
 
 
   <!-- Contact Container -->
-  <div class="w3-container w3-padding-64 w3-theme-l5" padding: "50px"id="contact">
+  <div class="w3-container w3-padding-64 w3-theme-l5" style= "padding:50px" id="contact">
     <div class="w3-row">
       <div class="w3-col m5">
         <div class="w3-padding-16">

@@ -74,8 +74,8 @@
     .modal-content {
       margin: auto;
       display: block;
-      width: 80%;
-      max-width: 700px;
+      width: 100%;
+      max-width: 1000px;
     }
 
     /* Caption of Modal Image */
@@ -305,7 +305,7 @@
       font-variant: normal;
       font-weight: 100;
       line-height: 40px;
-      padding: 60px 5px 60px 5px;
+      padding: 60px 5px 10px 5px;
     }
 
     h3.fontTheme1 {
@@ -351,18 +351,18 @@
     <a href="#" class="w3-bar-item newButtonRed">
       <i class="fa fa-home w3-margin-right"></i>PENN SIGGRAPH</a>
     <a href="#chapter" class="w3-bar-item newButton w3-hide-small">Chapter</a>
-    <a href="#works" class="w3-bar-item newButton w3-hide-small">Student Works</a>
+    <!-- <a href="#works" class="w3-bar-item newButton w3-hide-small">Student Works</a> -->
     <a href="#board" class="w3-bar-item newButton w3-hide-small">Board</a>
-    <a href="#agenda" class="w3-bar-item newButton w3-hide-small">Agenda</a>
+    <a href="Events.html" class="w3-bar-item newButton w3-hide-small">Events</a>
     <a href="#contact" class="w3-bar-item newButton w3-hide-small">Contact</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
     <a href="#chapter" class="w3-bar-item newButton w3-hide-small">Chapter</a>
-    <a href="#works" class="w3-bar-item newButton">Student Works</a>
+    <!--<a href="#works" class="w3-bar-item newButton">Student Works</a>-->
     <a href="#board" class="w3-bar-item newButton">Board</a>
-    <a href="#agenda" class="w3-bar-item newButton">Agenda</a>
+    <a href="Events.html" class="w3-bar-item newButton">Events</a>
     <a href="#contact" class="w3-bar-item newButton">Contact</a>
   </div>
   </div>
@@ -382,7 +382,7 @@
       box-sizing: border-box;
     }
 
-    .row>.column {
+    .row.column {
       padding: 0 8px;
     }
 
@@ -391,6 +391,8 @@
       display: table;
       clear: both;
     }
+
+    .demo
 
     .column {
       float: left;
@@ -546,68 +548,309 @@
     <div id="myModal" class="modal" style="padding:10px 10px">
       <span class="close cursor" onclick="closeModal()">&times;</span>
       <div class="modal-content">
-          <p id="title"></p>
-
         <div class="mySlides">
-          <img src="res/slide_photos/MylesAndOthers.jpeg" style="width:100%">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Bolivia: Reconstructing the Past &#13;&#10;
+          <!--<img src="res/slide_photos/MylesAndOthers.jpeg" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" style="padding-top: 1%; width:100%" src="res/slide_photos/MylesAndOthers.jpeg">
+            <br>
+            <br>
+            <br>
+            Group research project directed by Dr. Norman Badler and Dr. Clark Erickson to accurately reconstruct a depiction of the hydraulic landscape of Pre-Colombian Baures, Bolivia.  The goal of this project was to be able to create an interactive virtual environment that could be used to educate audiences about the time and location.  The project is still in progress and has a class, CIS 106, dedicated to it. 
+            <br>
+            <br>
+            <a href="https://www.youtube.com/watch?v=S2JKr-mh9pA" target="_blank">Full Video</a> 
+            <br>
+            <br>
+            Credit - Myles Al Yafei, Josh Nadel, Youssef V Kamal, 2017
+            <br>
+            [Unreal Engine 4, Maya, MotionBuilder, Adobe Design suite, USGS Earth Explorer]
+          </p>
         </div>
 
         <div class="mySlides">
-          <img src="res/slide_photos/Alex McCraw.png" style="width:100%">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Pathtracer Metal Spheres: Physically-based Rendering &#13;&#10;
+          <!--<img src="res/slide_photos/Alex McCraw.png" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" style="padding-top: 1%; width:100%" src="res/slide_photos/Alex McCraw.png">
+            <br>
+            <br>
+            <br>
+            Physically-based path trace rendered spheres with varying metal reflective properties.
+            <br>
+            <br>
+            Credit - Alex McCraw, 2017
+            <br>
+            [C++]
+          </p>
         </div>
 
         <div class="mySlides">
-          <img src="res/slide_photos/JackyLu.jpg" style="width:100%">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Juice Spiral &#13;&#10;
+          <!--<img src="res/slide_photos/JackyLu.jpg" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" style="width:100%" src="res/slide_photos/JackyLu.jpg">
+            <br>
+            <br>
+            <br>
+            Full CGI TV commercial for Êërįkåškø juice. Responsible for all aspects except for bottle's texture pattern design.
+            <br>
+            <br>
+            <a href="https://vimeo.com/212633577" target="_blank">Full Video</a>
+            <br>
+            <br>
+            Credit - Jacky Lu, 2017
+            <br>
+            [Houdini]
+          </p>
         </div>
 
         <div class="mySlides">
-          <img src="res/slide_photos/FeliciaChen.png" style="width:100%">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Garden Painting: Poppies
+          <!--<img src="res/slide_photos/FeliciaChen.png" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" src="res/slide_photos/FeliciaChen.png" style="width:100%">
+            <br>
+            <br>
+            <br>
+            California poppies.
+            <br>
+            <br>
+            Credit - Felicia Chen, 2018
+            <br>
+            [Photoshop]
+          </p>
         </div>
 
         <div class="mySlides">
-          <img src="res/slide_photos/Kathryn Miller.jpeg" style="width:100%">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Procedural Tree: L-System Tree
+          <!--<img src="res/slide_photos/Kathryn Miller.jpeg" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" src="res/slide_photos/Kathryn Miller.jpeg" style="width:100%">
+            <br>
+            <br>
+            <br>
+            A procedural tree generator using L systems.
+            <br>
+            <br>
+            Credit - Kathryn Miller, 2018
+            <br>
+            [WebGL, Typescript]
+          </p>
         </div>
 
         <div class="mySlides">
-          <img src="res/slide_photos/Kathryn,Myles,Grace.png" style="width:100%">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">MineCraft: CandyLand
+          <!--<img src="res/slide_photos/Kathryn,Myles,Grace.png" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" src="res/slide_photos/Kathryn,Myles,Grace.png" style="width:100%">
+            <br>
+            <br>
+            <br>
+            A simplified version of Minecraft that is candy land themed.  Features include procedural terrain, river and cloud generation, animated textures, interaction with the environment, shadow mapping, and a travelling Alpaca.
+            <br>
+            <br>
+            Credit - Kathryn Miller, Myles Al Yafei, Grace Gilbert, 2018
+            <br>
+            [C++, GLSL]
+          </p>
         </div>
 
         <div class="mySlides">
-          <img src="res/slide_photos/Grace Gilbert.png" style="width:100%">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Research: Eye Simulation
+          <!--<img src="res/slide_photos/Grace Gilbert.png" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" src="res/slide_photos/Grace Gilbert.png" style="width:100%">
+            <br>
+            <br>
+            <br>
+            A realistic, expressive eye simulation that behaves according to emotion and behavior patterns.  
+            <br>
+            <br>
+            Credit - Grace Gilbert, Christine Fu, Xuan Huang, 2017
+            <br>
+            [Maya, Python, Houdini]
+          </p>
         </div>
 
         <div class="mySlides">
-          <img src="res/slide_photos/Joe Klinger.png" style="width:100%">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Galaxy, Nebula and Stars Shader: Galaxy Shader
+          <!--<img src="res/slide_photos/Joe Klinger.png" style="width:100%">-->
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" src="res/slide_photos/Joe Klinger.png" style="width:100%">
+            <br>
+            <br>
+            <br>
+            A fully procedurally-generated galaxy that was made with fractal noise and some other cool math.
+            <br>
+            <br>
+            Credit - Joe Klinger, 2017
+            <br>
+            [GLSL, ShaderToy]
+          </p>
         </div>
 
         <div class="mySlides">
-          <img src="res/slide_photos/LinshenXiao_and_HanmingZhang.png" style="width:100%">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Procedural Desert
+          <!--<img src="res/slide_photos/LinshenXiao_and_HanmingZhang.png" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" src="res/slide_photos/LinshenXiao_and_HanmingZhang.png" style="width:100%">
+            <br>
+            <br>
+            <br>
+            The goal of this project is to create an environment that feels responsive and alive.  We wanted to create an animated environment with interactive procedural animations and models. We were motivated by games like Jounery and DreamTank.
+            <br>
+            <br>
+            Credit - Linshen Xiao & Hanming Zhang, 2018
+            <br>
+            [WebGL]
+          </p>
         </div>
 
         <div class="mySlides">
-            <img src="res/slide_photos/Byumjin_Kim2.png" style="width:100%">
-          </div>
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Dragon: There are a million
+          <!--<img src="res/slide_photos/Byumjin_Kim2.png" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" src="res/slide_photos/Byumjin_Kim2.png" style="width:100%">
+            <br>
+            <br>
+            <br>
+            GPU particle system using WebGL2
+            <br>
+            <br>
+            Credit - Byumjin Kim, 2018
+            <br>
+            [WebGL2]
+          </p>
+        </div>
 
-          <div class="mySlides">
-              <img src="res/slide_photos/Josh Nadel.jpg" style="width:100%">
-            </div>
+        <div class="mySlides">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Character: Phantom Lancer
+          <!--<img src="res/slide_photos/Josh Nadel.jpg" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" src="res/slide_photos/Josh Nadel.jpg" style="width:100%">
+            <br>
+            <br>
+            <br>
+            A high-definition portrait model of Phantom Lancer from the game Dota 2. Heavy emphasis on facial anatomy and sculptural detail.
+            <br>
+            <br>
+            Credit - Josh Nadel, 2017
+            <br>
+            [Maya, ZBrush, Arnold]
+          </p>
+        </div>
 
-            <div class="mySlides">
-                <img src="res/slide_photos/AliyaChen.png" style="width:100%">
-              </div>
+        <div class="mySlides">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Dragon Painting: Follow
+          <!--<img src="res/slide_photos/AliyaChen.png" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" src="res/slide_photos/AliyaChen.png" style="width:100%"> 
+            <br>
+            <br>
+            <br>
+            Inspired by a summer hike and my fascination with dragons.
+            <br>
+            <br>
+            Credit - Aliya Chen, 2018
+            <br>
+            [Photoshop]
+          </p>
+        </div>
 
-              <div class="mySlides">
-                  <img src="res/slide_photos/Sang.png" style="width:100%">
-                </div>
-                <div class="mySlides">
-                    <img src="res/slide_photos/Byumjin_Kim.png" style="width:100%">
-                  </div>
-                  <div class="mySlides">
-                      <img src="res/slide_photos/HannahBollar.png" style="width:100%">
-                    </div>
-                    <div class="mySlides">
-                        <img src="res/slide_photos/mariano-merchante-comp-final-fixed.jpg" style="width:100%">
-                      </div>
+        <div class="mySlides">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Procedural Planet: Heart
+          <!--<img src="res/slide_photos/Sang.png" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" src="res/slide_photos/Sang.png" style="width:100%">
+            <br>
+            <br>
+            <br>
+            Heart created out of math. There are two lonely bunny moons revolving around the damaged heart. 
+            <br>
+            <br>
+            Credit - Sang Lee, 2018
+            <br>
+            [WebGL]
+          </p>
+        </div>
+
+        <div class="mySlides">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Procedural Duck: Duck Never Fly
+          <!--<img src="res/slide_photos/Byumjin_Kim.png" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" src="res/slide_photos/Byumjin_Kim.png" style="width:100%"> 
+            <br>
+            <br>
+            <br>
+            Using SDF(signed distance function)s and toon shading, I created the duck referred to in a GIF reference image.  
+            <br>
+            <br>
+            Credit - Byumjin Kim, 2018
+            <br>
+            [WebGL]
+          </p>
+        </div>
+
+        <div class="mySlides">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Photon-Mapped Dragon
+          <!--<img src="res/slide_photos/HannahBollar.png" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" src="res/slide_photos/HannahBollar.png" style="width:100%">
+            <br>
+            <br>
+            <br>
+            Monte Carlo Pathtracer complete with a Full Lighting Integrator, a BVH acceleration structure, multiple importance sampling, global illumination, focal distance changes, different light source types (point, spot, area), and photon mapping.
+            <br>
+            <br>
+            Credit - Hannah Bollar, 2016
+            <br>
+            [C++]
+          </p>
+        </div>
+
+        <div class="mySlides">
+          <br>
+          <p style="color: white; font-size: 200%; font-weight: 120%; text-align:center">Untitled
+          <!--<img src="res/slide_photos/mariano-merchante-comp-final-fixed.jpg" style="width:100%">-->
+          </p>
+          <p style="color: white; font-size: 120%; font-weight: 100%; text-align:left">
+            <img class="demo cursor" src="res/slide_photos/mariano-merchante-comp-final-fixed.jpg" style="width:100%">
+            <br>
+            <br>
+            <br>
+            Credit - Mariano Merchante, 2018
+          </p>
+        </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -618,122 +861,133 @@
 
 
         <div class="column">
-            <span style="white-space: pre-line">@Model.CommentText</span>
-            <img class="demo cursor" src="res/slide_photos/MylesAndOthers.jpeg" style="width:100%" onclick="currentSlide(1)" 
+            <!--<span style="white-space: pre-line">@Model.CommentText</span>-->
+           <!-- <img class="demo cursor" src="res/slide_photos/MylesAndOthers.jpeg" style="width:80%" onclick="currentSlide(1)" 
           title="Bolivia: Reconstructing the Past (2017) &#13;&#10; [Unreal Engine 4, Maya, MotionBuilder, Adobe Design suite, USGS Earth Explorer]" 
-          alt= "Group research project directed by Dr. Norman Badler and Dr. Clark Erickson to accurately reconstruct a depiction of the hydraulic landscape of Pre-Colombian Baures, Bolivia.  The goal of this project was to be able to create an interactive virtual environment that could be used to educate audiences about the time and location.  The project is still in progress and has a class, CIS 106, dedicated to it. Full Video available here: https://www.youtube.com/watch?v=S2JKr-mh9pA Credit: Myles Al Yafei, Josh Nadel & Youssef V Kamal">
-          <p id="para"> group </p>
+          alt= "Group research project directed by Dr. Norman Badler and Dr. Clark Erickson to accurately reconstruct a depiction of the hydraulic landscape of Pre-Colombian Baures, Bolivia.  The goal of this project was to be able to create an interactive virtual environment that could be used to educate audiences about the time and location.  The project is still in progress and has a class, CIS 106, dedicated to it. 
+
+          Full Video available here: https://www.youtube.com/watch?v=S2JKr-mh9pA
+
+          Credit: Myles Al Yafei, Josh Nadel & Youssef V Kamal">-->
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Alex McCraw.png" style="width:100%" onclick="currentSlide(2)" 
+          <!--<img class="demo cursor" src="res/slide_photos/Alex McCraw.png" style="width:80%" onclick="currentSlide(2)" 
           title="Pathtracer Metal Spheres: Physically-based Rendering [C++]"
           alt="Physically-based path trace rendered spheres with varying metal reflective properties.
-          Credit: Alex McCraw">
+
+          Credit: Alex McCraw">-->
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/JackyLu.jpg" style="width:100%" onclick="currentSlide(3)" 
+          <!--<img class="demo cursor" src="res/slide_photos/JackyLu.jpg" style="width:80%" onclick="currentSlide(3)" 
           title="Juice Spiral [Houdini]"
           alt="Full CGI TV commercial for Êërįkåškø juice
-          Responsible for all aspects except for bottle's texture pattern design. Source: https://vimeo.com/212633577 Credit: Jacky Lu">
+          Responsible for all aspects except for bottle's texture pattern design.
+
+          Source: https://vimeo.com/212633577
+
+          Credit: Jacky Lu">-->
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/FeliciaChen.png" style="width:100%" onclick="currentSlide(4)" 
+          <!--<img class="demo cursor" src="res/slide_photos/FeliciaChen.png" style="width:80%" onclick="currentSlide(4)" 
           title="Garden Painting: Poppies [Photoshop]"
           alt="
           California poppies.
-           Credit: Felicia Chen">
+
+          Credit: Felicia Chen">-->
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Kathryn Miller.jpeg" style="width:100%" onclick="currentSlide(5)" 
+          <!--<img class="demo cursor" src="res/slide_photos/Kathryn Miller.jpeg" style="width:80%" onclick="currentSlide(5)" 
           title="Procedural Tree: L-System Tree [WebGL. Typescript ]"
           alt="
           A procedural tree generator using L systems.
-          Credit: Kathryn Miller">
+
+          Credit: Kathryn Miller">-->
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Kathryn,Myles,Grace.png" style="width:100%" onclick="currentSlide(6)" 
+          <!--<img class="demo cursor" src="res/slide_photos/Kathryn,Myles,Grace.png" style="width:80%" onclick="currentSlide(6)" 
           title="MineCraft: CandyLand [
           C++, GLSL
           ]"
           alt="A simplified version of Minecraft that is candy land themed.  Features include procedural terrain, river and cloud generation, animated textures, interaction with the environment, shadow mapping, and a travelling Alpaca.
-           Credit: Kathryn Miller, Myles Al Yafei, Grace Gilbert">
+
+          Credit: Kathryn Miller, Myles Al Yafei, Grace Gilbert">-->
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Grace Gilbert.png" style="width:100%" onclick="currentSlide(7)" 
+          <!--<img class="demo cursor" src="res/slide_photos/Grace Gilbert.png" style="width:80%" onclick="currentSlide(7)" 
           title="
           Research: Eye Simulation
           [
           Maya, Python, Houdini
           ]"
-          alt="
-          A realistic, expressive eye simulation that behaves according to emotion and behavior patterns.  
-           Credit: 
-          Grace Gilbert, Christine Fu, Xuan Huang
-          ">
+          alt="A realistic, expressive eye simulation that behaves according to emotion and behavior patterns.  
+          
+          Credit: Grace Gilbert, Christine Fu, Xuan Huang
+          ">-->
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Joe Klinger.png" style="width:100%" onclick="currentSlide(8)" 
-          title="
-          Galaxy, Nebula and Stars Shader: Galaxy Shader [GLSL, ShaderToy]
-          "
-          alt="
-          A fully procedurally-generated galaxy that was made with fractal noise and some other cool math.
-           Credit: Joe Klinger">
+          <!--<img class="demo cursor" src="res/slide_photos/Joe Klinger.png" style="width:80%" onclick="currentSlide(8)" 
+          title="Galaxy, Nebula and Stars Shader: Galaxy Shader [GLSL, ShaderToy]"
+          alt="A fully procedurally-generated galaxy that was made with fractal noise and some other cool math.
+
+          Credit: Joe Klinger">-->
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/LinshenXiao_and_HanmingZhang.png" style="width:100%" onclick="currentSlide(9)" 
-          title="
-          Procedural Desert [WebGL]
-          "
+          <!--<img class="demo cursor" src="res/slide_photos/LinshenXiao_and_HanmingZhang.png" style="width:80%" onclick="currentSlide(9)" 
+          title="Procedural Desert [WebGL]"
           alt="The goal of this project is to create an environment that feels responsive and alive.  We wanted to create an animated environment with interactive procedural animations and models. We were motivated by games like Jounery and DreamTank.
-          Credit: Linshen Xiao & Hanming Zhang">
+
+          Credit: Linshen Xiao & Hanming Zhang">-->
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Byumjin_Kim2.png" style="width:100%" onclick="currentSlide(10)" 
+          <!--<img class="demo cursor" src="res/slide_photos/Byumjin_Kim2.png" style="width:80%" onclick="currentSlide(10)" 
           title="Dragon: There are a million [WebGL]"
-          alt="
-          GPU particle system using WebGL2
-           Credit: Byumjin Kim">
+          alt="GPU particle system using WebGL2
+
+          Credit: Byumjin Kim">-->
         </div>
         <div class="column">
-          <img class="demo cursor" src="res/slide_photos/Josh Nadel.jpg" style="width:100%" onclick="currentSlide(11)" 
+          <!--<img class="demo cursor" src="res/slide_photos/Josh Nadel.jpg" style="width:80%" onclick="currentSlide(11)" 
           title="Character: Phantom Lancer [Maya, ZBrush, Arnold]"
-          alt="
-          A high-definition portrait model of Phantom Lancer from the game Dota 2. Heavy emphasis on facial anatomy and sculptural detail.
-           Credit: Josh Nadel">
+          alt="A high-definition portrait model of Phantom Lancer from the game Dota 2. Heavy emphasis on facial anatomy and sculptural detail.
+
+          Credit: Josh Nadel">-->
         </div>
         <div class="column">
-            <img class="demo cursor" src="res/slide_photos/AliyaChen.png" style="width:100%" onclick="currentSlide(12)" 
-            title="Dragon Painting: Follow [Photoshop]"
-            alt="
-            Inspired by a summer hike and my fascination with dragons.
-             Credit: Aliya Chen">
-          </div>
-          <div class="column">
-              <img class="demo cursor" src="res/slide_photos/Sang.png" style="width:100%" onclick="currentSlide(13)" 
-              title="Procedural Planet: Heart [WebGL]"
-              alt="Heart created out of math. There are two lonely bunny moons revolving around the damaged heart. Credit: Sang Lee">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="res/slide_photos/Byumjin_Kim.png" style="width:100%" onclick="currentSlide(14)" 
-                title="
-                Procedural Duck: Duck Never Fly [WebGL]
-                "
-                alt="
-                Using SDF(signed distance function)s and toon shading, I created the duck referred to in a GIF reference image.  
-                 Credit: Byumjin Kim">
-              </div>
-              <div class="column">
-                  <img class="demo cursor" src="res/slide_photos/HannahBollar.png" style="width:100%" onclick="currentSlide(15)" 
-                  title="
-                  Photon Mapped Dragon: Photon Mapper [C++]
-                  "
-                  alt="Monte Carlo Pathtracer complete with a Full Lighting Integrator, a BVH acceleration structure, multiple importance sampling, global illumination, focal distance changes, different light source types (point, spot, area), and photon mapping.
-                   Credit: Hannah Bollar">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="res/slide_photos/mariano-merchante-comp-final-fixed.jpg" style="width:100%" onclick="currentSlide(16)" alt="Credit: Mariano Merchante">
-                  </div>
+          <!--<img class="demo cursor" src="res/slide_photos/AliyaChen.png" style="width:80%" onclick="currentSlide(12)" 
+          title="Dragon Painting: Follow [Photoshop]"
+          alt="Inspired by a summer hike and my fascination with dragons.
+
+          Credit: Aliya Chen">-->
+        </div>
+        <div class="column">
+          <!--<img class="demo cursor" src="res/slide_photos/Sang.png" style="width:80%" onclick="currentSlide(13)" 
+          title="Procedural Planet: Heart [WebGL]"
+          alt="Heart created out of math. There are two lonely bunny moons revolving around the damaged heart. 
+
+          Credit: Sang Lee">-->
+        </div>
+        <div class="column">
+          <!--<img class="demo cursor" src="res/slide_photos/Byumjin_Kim.png" style="width:80%" onclick="currentSlide(14)" 
+          title="Procedural Duck: Duck Never Fly [WebGL]"
+          alt="Using SDF(signed distance function)s and toon shading, I created the duck referred to in a GIF reference image.  
+
+          Credit: Byumjin Kim">-->
+        </div>
+        <div class="column">
+          <!--<img class="demo cursor" src="res/slide_photos/HannahBollar.png" style="width:80%" onclick="currentSlide(15)" 
+          title="
+          Photon Mapped Dragon: Photon Mapper [C++]
+          "
+          alt="Monte Carlo Pathtracer complete with a Full Lighting Integrator, a BVH acceleration structure, multiple importance sampling, global illumination, focal distance changes, different light source types (point, spot, area), and photon mapping.
+
+          Credit: Hannah Bollar">-->
+        </div>
+        <div class="column">
+          <!--<img class="demo cursor" src="res/slide_photos/mariano-merchante-comp-final-fixed.jpg" style="width:80%" onclick="currentSlide(16)"
+
+          alt="Credit: Mariano Merchante">-->
+        </div>
+
       </div>
     </div>
 
@@ -786,17 +1040,27 @@
 
   </div>
 
-   <div class="w3-col backgroundWhite" style="padding: 40px 40px">
-    <div class="w3-col" id="chapter" align="center" width="20%">
-      <h1 class="fontThemeBlack">
+   <div class="w3-col backgroundWhite" style="padding: 0; width: 100%">
+    <div class="w3-col" id="chapter" style="align-self:center; text-align:center; float:center; width:100%">
+      <h1 class="fontThemeBlack" style="padding-top:2%">
         Our Chapter
       </h1>
-      <p class="sansserif">
+      <br>
+      <br>
+      <img src="res/group.jpg" style="width:35%;">
+      <p class="sansserif" style="text-align:left; width: 75%; padding-left: 25%" align="center">
+        <br>
         The SIG Center hosts a large and active  <a href="https://www.siggraph.org/">ACM SIGGRAPH</a> Student Chapter.
         Penn's SIGGRAPH Chapter is a computer graphics oriented group which focuses on fostering a community of students interested
-        in animation, computer science, games and VFX. Some of SIGGRAPH's activities include a Demo Reel Night, weekly talks
-        on computer graphics topics, tutorials, and movie nights.
+        in animation, computer science, games, general graphics, and VFX.
+        <br>
+        <br>
+        Some of SIGGRAPH's activities include a Demo Reel Night, weekly talks
+        on computer graphics topics, tutorials, panels, and movie nights.
       </p>
+      <br>
+      <br>
+      <br>
     </div>
   </div> 
 
@@ -1163,121 +1427,103 @@
     </div> 
 
   -->
-  <!-- board Container -->
-  <div class="w3-center backgroundWhite" width="45%" id="board" style="padding:3% 5% 5% 5%">
-    <h1 class="fontThemeBlack" style="padding:3% 5% 0% 5%">
-      MEET THE BOARD
-    </h1>
-    <h2 style="font-size: 20px">
-      Click on image for links
-    </h2>
+  <div class="container" id ="s"></div>
+  <div class="w3-center w3-theme-l5" id="board" style="float: center; width:100%; padding:3% 7% 7% 7%">
+    <div class="w3-row" style="align-content:center; float:center; width:100%" align="center">
+      <h1 class="fontTheme2" id = "board">
+        Meet the Board
+      </h1>
+      <p> Click picture for portfolio </p>
 
-    <div class="w3-row" style="padding:1% 5% 10% 5%">
-      <div class="w3-quarter">
-        <a href="http://hannahbollar.com" target="_blank">
-          <img src="res/Bollar.jpg" align="center" style="width:60%" class="w3-card-4 w3-hover-opacity">
-        </a>
-        <h3 class="fontTheme2"> Hannah Bollar </h3>
-        <h3 class="fontTheme1">President</h3>
-        <h3 class="fontTheme1" style=" font-size: 15px;">hbollar@seas.upenn.edu</h3>
+      <div id="mid-container" style="width: 60%; float:center; align-self:center; text-align: center">
+        <div class="w3-quarter">
+          <a href="http://hannahbollar.com" target="_blank">
+            <img src="res/Bollar.jpg" align="center" style="width:50%" class="w3-card-4 w3-hover-opacity">
+          </a>
+          <h3 class="fontTheme2">Hannah Bollar </h3>
+          <h3 class="fontTheme1">President</h3>
+          <h3 class="fontTheme1" style=" font-size: 15px;">hbollar@seas.upenn.edu</h3>
+        </div>
+
+        <div class="w3-quarter">
+          <a href="http://www.emiliyafei.com" target="_blank">
+            <img src="res/alyafei.png" align="center" style="width:50%" class="w3-card-4 w3-hover-opacity">
+          </a>
+          <h3 class="fontTheme2">Myles Al Yafei</h3>
+          <h3 class="fontTheme1">Vice President</h3>
+          <h3 class="fontTheme1" style="font-size: 15px;">alyafei@seas.upenn.edu</h3>
+        </div>
+
+        <div class=" w3-quarter">
+          <a href="http://carolinelachanski.com/">
+            <img src="res/Lachanski.jpg" style="width:50%" class="w3-card-4 w3-hover-opacity">
+          </a>
+          <h3 class="fontTheme2">Caroline Lachanski</h3>
+          <h3 class="fontTheme1">Secretary</h3>
+          <h3 class="fontTheme1" style=" font-size: 15px;">clach@seas.upenn.edu</h3>
+        </div>
+
+        <div class=" w3-quarter">
+          <img src="res/Canarick.jpg" style="width:50%" class="w3-card-4">
+          <h3 class="fontTheme2">Adam Canarick</h3>
+          <h3 class="fontTheme1">Treasurer</h3>
+          <h3 class="fontTheme1" style=" font-size: 15px;">canarick@seas.upenn.edu</h3>
+        </div>
+      <br>
+      <div class="w3-row" style="align-content:center; float:center; width:100%" align="center">
+        <div class="w3-quarter">
+          <a href="https://leesangeun.portfoliobox.net">
+            <img src="res/Lee.jpg" style="width:50%" class="w3-card-4 w3-hover-opacity">
+          </a>
+          <h3 class="fontTheme2">Sangeun Lee</h3>
+          <h3 class="fontTheme1">Web-Master</h3>
+          <h3 class="fontTheme1" style=" font-size: 15px;">eunsang@seas.upenn.edu</h3>
+        </div>
+
+        <div class="w3-quarter">
+          <img src="res/Jang.png" style="width:50%" class="w3-card-4 w3-hover-opacity">
+          <h3 class="fontTheme2">Nick Jang</h3>
+          <h3 class="fontTheme1">Board Member</h3>
+          <h3 class="fontTheme1" style=" font-size: 15px;">nickjang@seas.upenn.edu</h3>
+        </div>
+
+        <div class="w3-quarter">
+          <a href="https://vimeo.com/288299173" target="_blank">
+            <img src="res/gilbert.png" style="width:50%" class="w3-card-4 w3-hover-opacity">
+          </a>
+          <h3 class="fontTheme2">Grace Gilbert</h3>
+          <h3 class="fontTheme1">Board Member</h3>
+          <h3 class="fontTheme1" style=" font-size: 15px;">gilbert@seas.upenn.edu</h3>
+        </div>
+
+        <div class="w3-quarter">
+          <a href="https://dzungpnguyen.weebly.com" target="_blank">
+            <img src="res/nguyen.jpg" style="width:50%" class="w3-card-4 w3-hover-opacity">
+          </a>
+          <h3 class="fontTheme2">Dzung Nguyen</h3>
+          <h3 class="fontTheme1">Board Member</h3>
+          <h3 class="fontTheme1" style=" font-size: 15px;">dzungng@seas.upenn.edu</h3>
+        </div>
       </div>
-
-      <div class="w3-quarter">
-        <a href="http://www.emiliyafei.com" target="_blank">
-          <img src="res/alyafei.png" align="center" style="width:55%" class="w3-card-4 w3-hover-opacity">
-        </a>
-        <h3 class="fontTheme2">Myles Al Yafei</h3>
-        <h3 class="fontTheme1">Vice President</h3>
-        <h3 class="fontTheme1" style="font-size: 15px;">alyafei@seas.upenn.edu</h3>
-      </div>
-
-      <div class=" w3-quarter">
-        <a href="http://carolinelachanski.com/">
-          <img src="res/Lachanski.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
-        </a>
-        <h3 class="fontTheme2">Caroline Lachanski</h3>
-        <h3 class="fontTheme1">Secretary</h3>
-        <h3 class="fontTheme1" style=" font-size: 15px;">clach@seas.upenn.edu</h3>
-      </div>
-
-      <div class=" w3-quarter">
-        <img src="res/Canarick.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
-        <h3 class="fontTheme2">Adam Canarick</h3>
-        <h3 class="fontTheme1">Treasurer</h3>
-        <h3 class="fontTheme1" style=" font-size: 15px;">canarick@seas.upenn.edu</h3>
-      </div>
-    </div>
-
-    <div class="w3-row" style="padding:1% 5% 5% 5%">
-      <div class="w3-quarter">
-        <a href="https://leesangeun.portfoliobox.net">
-          <img src="res/Lee.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
-        </a>
-        <h3 class="fontTheme2">Sangeun Lee</h3>
-        <h3 class="fontTheme1">Web-Master</h3>
-        <h3 class="fontTheme1" style=" font-size: 15px;">eunsang@seas.upenn.edu</h3>
-      </div>
-
-      <div class="w3-quarter">
-        <img src="res/Jang.png" style="width:55%" class="w3-card-4 w3-hover-opacity">
-        <h3 class="fontTheme2">Nick Jang</h3>
-        <h3 class="fontTheme1">Board Member</h3>
-        <h3 class="fontTheme1" style=" font-size: 15px;">nickjang@seas.upenn.edu</h3>
-      </div>
-
-      <div class="w3-quarter">
-        <a href="https://vimeo.com/288299173" target="_blank">
-          <img src="res/gilbert.png" style="width:55%" class="w3-card-4 w3-hover-opacity">
-        </a>
-        <h3 class="fontTheme2">Grace Gilbert</h3>
-        <h3 class="fontTheme1">Board Member</h3>
-        <h3 class="fontTheme1" style=" font-size: 15px;">gilbert@seas.upenn.edu</h3>
-      </div>
-      <!-- 
-      <div class=" w3-quarter">
-        <img src="res/Lu.jpg" style="width:55%" class="w3-card-4 w3-hover-opacity">
-        <h3 class="fontTheme2">Jacky Lu</h3>
-        <h3 class="fontTheme1">Board Member</h3>
-        <h3 class="fontTheme1" style=" font-size: 15px;">jackylu@seas.upenn.edu</h3>
-      </div> -->
-
-
-
-    </div>
 
   </div>
-  </div>
-
-
-
-
-  <div class="background" style="padding:30px 30px" align="center" id="agenda">
-    <h1 class="fontTheme2" style="color:white; padding:40px 5px 25px"> The Agenda </h1>
-    <div class="background w3-row">
-      <img src="res/group.jpg" align="center" style="width:60%; padding: 1% 5% 5% 5%;">
-      <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=900&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=7035r7o0237bslke3rov67s5j4%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FNew_York"
-        height="450px" align="center" frameborder="0" style="padding: 1% 1%" scrolling="no"> </iframe>
-    </div>
-    <div class="background w3-col" id="agenda">
-    </div>
   </div>
 
 
   <!-- Contact Container -->
-  <div class="w3-container w3-padding-64 w3-theme-l5" style= "padding:50px" id="contact">
-    <div class="w3-row">
-      <div class="w3-col m5">
-        <div class="w3-padding-16">
-          <p class="sansserif w3-border-pale-blue w3-bottombar">Contact Us</p>
-        </div>
-        <p class="sansserif">Swing by for a cup of java(script)!</p>
-        <p class="sansserif">
-          <i class="fa fa-map-marker w3-text-blue"></i> SIGlab, Penn</p>
-        <p class="sansserif">
-          <i class="fa fa-envelope-o w3-text-blue w3-xlarge"></i> upennacmsiggraph@gmail.com</p>
+  <div class="w3-container w3-padding-64 backgroundWhite" style= "padding:10%" id="contact">
+    <h1 class="fontThemeBlack" align="center" style="padding-bottom:4%">
+        Contact Us
+    </h1>
+    <div class="w3-row" style="width:100%" align="center">
+      <div class="w3-col" style="float:left; text-align:left; width:30%">
+        <p class="sansserif">Have questions? <br>Want to suggest an event?<br>
+        <br>Swing by for a cup of java(script)!<br>
+        <br><i class="fa fa-map-marker w3-text-blue"></i> SIGLab, Penn<br>
+        <br><i class="fa fa-envelope-o w3-text-blue w3-xlarge"></i> upennacmsiggraph@gmail.com</p>
       </div>
 
-      <div class="w3-col m7">
+      <div class="w3-col" style="float:right; width:55%; text-align:left">
         <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="mailto:upennacmsiggraph@gmail.com" enctype="text/plain">
           <!-- target="_blank"> -->
           <div class="w3-section">
@@ -1312,7 +1558,7 @@
       <a href="https://www.seas.upenn.edu/" target="_blank">Penn Engineering</a>
     </p>
 
-    <div style="position:relative; bottom:100px; z-index:1;" class="w3-tooltip w3-right">
+    <!-- <div style="position:relative; bottom:100px; z-index:1;" class="w3-tooltip w3-right">
       <span class="w3-text w3-padding theme w3-hide-small">
         Go To Top
       </span>
@@ -1322,7 +1568,7 @@
           <i class="fa fa-chevron-circle-up"></i>
         </span>
       </a>
-    </div>
+    </div> -->
   </footer>
 
   <script>

@@ -279,6 +279,7 @@
 
   <style>
     h1.fontTheme1 {
+      color: #ffff !important;
       font-family: 'Open Sans', sans-serif;
       font-size: 50px;
       font-style: normal;
@@ -307,7 +308,13 @@
       line-height: 40px;
       padding: 60px 5px 60px 5px;
     }
-
+    h2.fontTheme1 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 23px;
+      padding: 5px 5px 5px 5px;
+    }
     h3.fontTheme1 {
       font-family: 'Open Sans', sans-serif;
       font-size: 20px;
@@ -525,23 +532,37 @@
 
 <body>
 
-  <div class="backgroundBlack" style="padding:30px 30px; height: 100%" align="center" id="events">
-    <h1 class="fontTheme2" style="color:white; padding-top:5% padding-bottom:5%"> Schedule </h1>
+  <div class="backgroundBlack" style=" padding:30px 30px; height: 100%" align="center" id="events">
+    <h1 class="fontTheme2" style="color:white; padding-top:5% padding-bottom:5%"> 
+      Schedule 
+    </h1>
     <div class="backgroundBlack w3-row" style="width:100%">
-        <iframe src="https://calendar.google.com/calendar/b/3/embed?showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=7035r7o0237bslke3rov67s5j4%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FNew_York" style="border-width:0; float:center" font-size="50" width="80%" height="400" frameborder="0" scrolling="no"></iframe>
+          <iframe src="https://calendar.google.com/calendar/b/3/embed?showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=7035r7o0237bslke3rov67s5j4%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FNew_York" style="border-width:0; float:center" font-size="50" width="80%" height="400" frameborder="0" scrolling="no"></iframe>
     </div>
     <div class="background w3-col" id="agenda">
     </div>
   </div>
 
-  <div class="w3-container w3-padding-64 w3-theme-l5" style= "padding:10%" id="contact">
-    <h1 class="fontThemeBlack" align="center" style="padding-bottom:4%">
+  <div class="w3-container w3-padding-64 " style= "padding:10%; background:#045ea7" id="contact">
+    <h1 class="fontTheme1 color: #ffff" align="center" style="padding-bottom:4%;">
         Events
     </h1>
-    <div class="w3-row w3-theme-blue">
-      <h2 align="center">
-        Information Coming Soon!
-      </h2>
+    <div id="events" class="overflow: auto">
+      <div style="background: #ffff; padding: 3%;">     
+         <h2 class="fontTheme1" align="center" style=" "> FALL FESTIVAL </h2>
+         <a class="fontTheme1">        
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae. Sollicitudin ac orci phasellus egestas tellus rutrum tellus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Tortor id aliquet lectus proin nibh nisl. Sed vulputate mi sit amet mauris commodo quis imperdiet. Sit amet commodo nulla facilisi nullam. Quisque egestas diam in arcu cursus euismod quis. Neque vitae tempus quam pellentesque nec. Morbi leo urna molestie at elementum. At auctor urna nunc id cursus. Est ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Lacus vel facilisis volutpat est velit egestas dui id ornare. Ut ornare lectus sit amet. Integer eget aliquet nibh praesent. Cras pulvinar mattis nunc sed blandit libero. Enim sit amet venenatis urna cursus eget nunc. Tristique et egestas quis ipsum.      </h2>
+          </a>
+      </div>
+      <div class="w3-padding"style="; padding %4">
+      <br>
+      </div>
+      <div style="background: #ffff; padding:4%">
+          <h2 class="fontTheme1" align="center" style=""> HOUDINI WORKSHOP </h2>
+          <a class="fontTheme1">        
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae. Sollicitudin ac orci phasellus egestas tellus rutrum tellus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Tortor id aliquet lectus proin nibh nisl. Sed vulputate mi sit amet mauris commodo quis imperdiet. Sit amet commodo nulla facilisi nullam. Quisque egestas diam in arcu cursus euismod quis. Neque vitae tempus quam pellentesque nec. Morbi leo urna molestie at elementum. At auctor urna nunc id cursus. Est ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Lacus vel facilisis volutpat est velit egestas dui id ornare. Ut ornare lectus sit amet. Integer eget aliquet nibh praesent. Cras pulvinar mattis nunc sed blandit libero. Enim sit amet venenatis urna cursus eget nunc. Tristique et egestas quis ipsum.      </h2>
+           </a>
+      </div>
     </div>
   </div>
 

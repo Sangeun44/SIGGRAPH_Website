@@ -4,278 +4,17 @@
 <title>PENN SIGGRAPH</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main_styles.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <body id="myPage">
-
-  <style>
-    div.scrollmenu {
-      background-color: rgb(23, 20, 20);
-      overflow: auto;
-      padding: 10px 5px 10px 5px;
-      white-space: nowrap;
-    }
-    div.scrollmenu img {
-      display: inline-block;
-      color: white;
-      text-align: center;
-      padding: 5px 5px 5px 5px;
-      text-decoration: none;
-    }
-    div.scrollmenu img:hover {
-      background-color: #777;
-      transform: scale(1.2);
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    #myImg {
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    #myImg:hover {
-      opacity: 0.7;
-    }
-
-    /* The Modal (background) */
-
-    .modal {
-      display: none;
-      /* Hidden by default */
-      position: fixed;
-      /* Stay in place */
-      z-index: 1;
-      /* Sit on top */
-      padding-top: 100px;
-      /* Location of the box */
-      left: 0;
-      top: 0;
-      width: 100%;
-      /* Full width */
-      height: 100%;
-      /* Full height */
-      overflow: auto;
-      /* Enable scroll if needed */
-      background-color: rgb(0, 0, 0);
-      /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.9);
-      /* Black w/ opacity */
-    }
-
-    /* Modal Content (image) */
-
-    .modal-content {
-      margin: auto;
-      display: block;
-      width: 100%;
-      max-width: 1000px;
-    }
-
-    /* Caption of Modal Image */
-
-    #caption {
-      margin: auto;
-      display: block;
-      width: 100%;
-      max-width: 700px;
-      text-align: center;
-      color: #ccc;
-      padding: 5px 10px 10px 10px;
-      height: 150px;
-      white-space: pre-line;
-      white-space: pre-wrap;
-
-    }
-    #just-line-break {
-  white-space: pre-line;
-  }
-  #line-break-and-tab {
-  white-space: pre-wrap;
-}
-
-    #title {
-      margin: auto;
-      font-size: 20px;
-      display: block;
-      width: 100%;
-      max-width: 700px;
-      text-align: center;
-      color: #ccc;
-      padding: 10px 0 10px 10px;
-      height: 150px;
-    }
-
-    /* Add Animation */
-
-    .modal-content,
-    #caption {
-      -webkit-animation-name: zoom;
-      -webkit-animation-duration: 0.6s;
-      animation-name: zoom;
-      animation-duration: 0.6s;
-    }
-
-    .modal-content,
-    #title {
-      -webkit-animation-name: zoom;
-      -webkit-animation-duration: 0.6s;
-      animation-name: zoom;
-      animation-duration: 0.6s;
-    }
-    .modal-content,
-    #credit {
-      -webkit-animation-name: zoom;
-      -webkit-animation-duration: 0.6s;
-      animation-name: zoom;
-      animation-duration: 0.6s;
-    }
-
-    @-webkit-keyframes zoom {
-      from {
-        -webkit-transform: scale(0)
-      }
-      to {
-        -webkit-transform: scale(1)
-      }
-    }
-
-    @keyframes zoom {
-      from {
-        transform: scale(0)
-      }
-      to {
-        transform: scale(1)
-      }
-    }
-
-    /* The Close Button */
-
-    .close {
-      position: absolute;
-      top: 15px;
-      right: 35px;
-      color: #f1f1f1;
-      font-size: 40px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: #bbb;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    /* 100% Image Width on Smaller Screens */
-
-    @media only screen and (max-width: 700px) {
-      .modal-content {
-        width: 100%;
-      }
-    }
-
-    .newButton {
-      background-color: #01256e;
-      border: none;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .newButton:hover {
-      background-color: #95001a;
-      /* Green */
-      color: white;
-    }
-
-    .newButtonRed {
-      background-color: #95001a;
-      border: none;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
-  <style>
-    .bar {
-      background-color: #01256e;
-      height: 0px;
-    }
-
-    .background {
-      color: #000f3a;
-      background-color: #01256e;
-    }
-
-    .backgroundBlack {
-      color: #000f3a;
-      background-color: #000f3a;
-    }
-
-    .backgroundWhite {
-      color: #000f3a;
-      background-color: #ffff;
-    }
-
-    .theme {
-      color: #ffff !important;
-      padding: 50px 15% 10%;
-      background: -webkit-linear-gradient(top, #01256e 25%, #01256e 75%)
-    }
-
-    .smallTheme {
-      color: #ffff !important;
-      padding: 10px 1% 10%;
-      background: -webkit-linear-gradient(top, #01256e 25%, #01256e 75%)
-    }
-  </style>
-  <style>
-    .newspaper {
-      -webkit-column-count: 6;
-      /* Chrome, Safari, Opera */
-      -moz-column-count: 6;
-      /* Firefox */
-      column-count: 6;
-      -webkit-column-gap: 150px;
-      /* Chrome, Safari, Opera */
-      -moz-column-gap: 150px;
-      /* Firefox */
-      column-gap: 150px;
-      -webkit-column-rule: 1px solid #01256e;
-      /* Chrome, Safari, Opera */
-      -moz-column-rule: 1px solid #01256e;
-      /* Firefox */
-      column-rule: 1px solid #01256e;
-      -webkit-column-width: 100px;
-      /* Chrome, Safari, Opera */
-      -moz-column-width: 100px;
-      /* Firefox */
-      column-width: 100px;
-    }
-
-    h2.newPaper {
-      -webkit-column-span: all;
-      /* Chrome, Safari, Opera */
-      column-span: 1;
-      font-family: 'Open Sans', sans-serif;
-
-    }
-  </style>
 
   <style>
     h1.fontTheme1 {
@@ -287,66 +26,6 @@
       font-weight: 100;
       line-height: 40px;
       padding: 10px 5px 5px 10px;
-    }
-
-    h1.fontThemeBlack {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 50px;
-      font-style: normal;
-      font-variant: normal;
-      font-weight: 100;
-      line-height: 40px;
-      padding: 10px 5px 5px 10px;
-    }
-
-    h1.fontTheme2 {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 50px;
-      font-style: normal;
-      font-variant: normal;
-      font-weight: 100;
-      line-height: 40px;
-      padding: 60px 5px 60px 5px;
-    }
-    h2.fontTheme1 {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 23px;
-      padding: 5px 5px 5px 5px;
-    }
-    h3.fontTheme1 {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 23px;
-      padding: 5px 5px 5px 5px;
-    }
-
-    h3.fontTheme2 {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 23px;
-      padding: 5px 5px 5px 5px;
-    }
-
-    h3.smallTheme {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      line-height: 23px;
-      padding: 5px 5px 5px 5px;
-    }
-
-    p.sansserif {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 20px;
-    }
-
-    label.sansserif {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 20px;
     }
   </style>
 
@@ -364,172 +43,6 @@
     <a href="main.html#contact" class="w3-bar-item newButton w3-hide-small">Contact</a>
   </div>
 
-  <!-- Navbar on small screens -->
-  <!-- <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="main.html#chapter" class="w3-bar-item newButton w3-hide-small">Chapter</a>
-    <a href="#works" class="w3-bar-item newButton">Student Works</a>
-    <a href="main.html#board" class="w3-bar-item newButton">Board</a>
-    <a href="Events.html" class="w3-bar-item newButton">Events</a>
-    <a href="main.html#contact" class="w3-bar-item newButton">Contact</a>
-  </div> -->
-  </div>
-
-  <!-- Image Header -->
-<!--   <div class="w3-display-container w3-animate-opacity">
-    <img src="res/header.png" alt="header" style=" width:100%; align-content:center; min-height:10%; max-height:100%;">
-  </div> -->
-<style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    .row.column {
-      padding: 0 8px;
-    }
-
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    .demo
-
-    .column {
-      float: left;
-      width: 25%;
-    }
-
-    /* The Modal (background) */
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      padding-top: 100px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: black;
-    }
-
-    /* Modal Content */
-
-    .modal-content {
-      position: relative;
-      background-color: #000000;
-      margin: auto;
-      padding: 0;
-      width: 70%;
-      max-width: 50%;
-    }
-
-    /* The Close Button */
-
-    .close {
-      color: white;
-      position: absolute;
-      top: 10px;
-      right: 25px;
-      font-size: 35px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: #999;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .mySlides {
-      display: none;
-    }
-
-    .cursor {
-      cursor: pointer;
-    }
-
-    /* Next & previous buttons */
-
-    .prev,
-    .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -50px;
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-      -webkit-user-select: none;
-    }
-
-    /* Position the "next button" to the right */
-
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-
-    /* On hover, add a black background color with a little bit see-through */
-
-    .prev:hover,
-    .next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    /* Number text (1/3 etc) */
-
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-
-    img {
-      margin-bottom: -4px;
-    }
-
-    .caption-container {
-      text-align: center;
-      background-color: black;
-      padding: 2px 16px 10px 15px;
-      color: white;
-    }
-
-
-    .demo {
-      opacity: 0.6;
-    }
-
-    .active,
-    .demo:hover {
-      opacity: 1;
-    }
-
-    img.hover-shadow {
-      transition: 0.3s;
-    }
-
-    .hover-shadow:hover {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-  </style>
-
 <body>
 
   <div class="backgroundBlack" style=" padding:30px 30px; height: 100%" align="center" id="events">
@@ -543,27 +56,122 @@
     </div>
   </div>
 
+  <div class="container" style="float: center; width:70%; padding:3% 7% 7% 7%" >
+      <h1 class="fontThemeBlack" align="center">Upcoming Events</h1> 
+      <div class="container" style="float: center; width:50%; padding:3% 7% 7% 7%" ></div>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+                    
+          <div class="item active">
+              <div class="container" style="float: center; width:100%; padding:3% 7% 7% 7%" align="center">
+                <img src="res/events/study.jpg" style="width:100%"> 
+                <div class="centered" style="color:black; font-size:40px; "> JOLT Study Break </div>
+                <div class="centered-bottom" style="color:white; font-size:24px;"> Friday, February 22 </div>
+              </div>
+              <br>
+          </div>
+        
+          <div class="item">
+              <br>
+              <div class="container" style="float: center; width:100%; padding:3% 7% 7% 7%" align="center">
+                <img src="res/events/mixer.png" style="width:100%"> 
+                <div class="centered" style="color:white; font-size:40px; "> Penn-Drexel Mixer </div>
+                <div class="centered-bottom" style="color:white; font-size:24px;"> Saturday, February 23 </div>
+              </div>
+              <br>
+          </div>
+
+          <div class="item">
+            <br>
+            <div class="container" style="float: center; width:100%; padding:3% 7% 7% 7%" align="center">
+              <img src="res/events/icon_tournament.png" style="width:60%; opacity:20;"> 
+              <div class="centered" style="color:black; font-size:40px; "> Smash Brawl Tournament </div>
+              <div class="centered-bottom" style="color:black; font-size:24px;"> Friday, March 15 </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="item">
+          <br>
+          <div class="container" style="float: center; width:100%; padding:3% 7% 7% 7%" align="center">
+            <img src="res/events/movie.jpg" style="width:70%"> 
+            <div class="centered" style="color:white; font-size:40px; "> Movie Night </div>
+            <div class="centered-bottom" style="color:white; font-size:24px;"> Saturday, March 16 </div>
+          </div>
+          <br>
+      </div>
+
+      <div class="item ">
+          <br>
+          <div class="container" style="float:center; width:100%; padding:3% 7% 7% 7%" align="center">
+            <img src="res/events/speaker.jpg" style="width:70%"> 
+            <div class="centered" style="color:white; font-size:40px;"> Speaker Series: Peter Kanyuk </div>
+            <div class="centered-bottom" style="color:white; font-size:24px;"> Friday, March 22 </div>
+            <br>              
+          </div>
+          <br>
+        </div>
+  
+        </div>
+        <br>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+  </div>
+
   <div class="w3-container w3-padding-64 " style= "padding:5% 5% 5% 5%; background:#045ea7" id="contact">
     <h1 class="fontTheme1 color: #ffff" align="center" style="padding-bottom:4%;">
        Past Events
     </h1>
-    <div class="w3-padding"style="; padding %2">
-        <br>
-   </div>
+
    <div class="w3-container"  style="padding:5% 20% 5% 20%" >
+      
+          <div class="w3-row" style="background: #ffff; padding:5% 5% 5% 5%">
+            <img src="res/events/femmehacks.jpg" width="30%" max-height="200px" align="left" style="padding:1% 2% 1% 1%"> 
+             <h2 class="fontTheme1" align="center" style=""> FEMMEHACKS WORKSHOP </h2>
+             <h3 class="fontTheme1" style="font-size: 12px;" align="right"> 2/9/2019 </h3>
+             <a class="" style="color: black">        
+               For FemmeHacks, an women centric Hackathon, Myles Al Yafei organized a workshop around ShaderToy and the technique of ray-tracing.
+             </a>
+          </div>
+          <div class="w3-padding"style="; padding %2">
+              <br>
+          </div>
+    <div class="w3-row" style="background: #ffff; padding:5% 5% 5% 5%">
+      <img src="res/events/resume.jpg" width="30%" max-height="200px" align="left" style="padding:1% 2% 1% 1%"> 
+      <h2 class="fontTheme1" align="center" style=""> RESUME WORKSHOP </h2>
+      <h3 class="fontTheme1" style="font-size: 12px;" align="right"> 2/8/2019 </h3>
+      <a class="" style="color: black">        
+          For this workshop, we went through resumes and critiqued and provided advice for students that submitted them ahead of time. Additionally, we looked at other resumes for examples of good and back practices along with different formatting and topics that can be brought up in them.         </a>
+         <h3 class ="fontTheme1" style="font-size: 14px" align="right"> 
+           <a href="https://drive.google.com/drive/folders/1VjiefDClQhiqvWdMx87oK0h-14CttPqa?usp=sharing"> Resources </a>
+         </h3>
+   </div> 
+
+   <div class="w3-padding"style="; padding %2">
+      <br>
+  </div>
       <div class="w3-row" style="background: #ffff; padding:5% 5% 5% 5%" width="50%">
         <img class="w3-padding" src="res/events/zbrush.jpg" width="40%" align="left" style="padding:10% 10% 10% 5%"> 
         <h2 class="fontTheme1" align="center" style=""> ZBRUSH WORKSHOP </h2>
         <h3 class="fontTheme1" style="font-size: 12px;" align="right"> 11/30/2018 </h3>
-        <a class="fontTheme1" align="left">        
-          The Zbrush workshop introduced new students to the interface of ZBrush. 
+        <a class="" style="color: black">        
+            The Zbrush workshop introduced new students to the interface of ZBrush. 
           The first half of the workshop was a mini-lecture to discuss the tools available to sculpt digitally. 
           The other half was spent on creating individual models.
             </a>
          </a>
-         <!-- <a class ="fontTheme1"> 
-           <a href="https://drive.google.com/open?id=1RjNy09AcpOQnSk4dGpWj2oZsviHyR0ev"> Resources </a>
-         </a> -->
+
       </div>
     <div class="w3-padding"style="; padding %2">
         <br>
@@ -572,8 +180,8 @@
         <img class="w3-padding" src="res/events/fall-leaves.jpg" width="35%" align="left" style="padding:10% 10% 10% 5%"> 
         <h2 class="fontTheme1" align="center" style=""> FALL FESTIVAL </h2>
         <h3 class="fontTheme1" style="font-size: 12px;" align="right"> 11/09/2018 </h3>
-        <a class="fontTheme1">        
-          The Fall Festival was an engineering-wide event in collaboration with Penn CSS, HKN, and SWE. Members of the four clubs were there to give advance registration advice to students who had any last minute questions before the deadline. Fall themed snacks and activities, including apple cider and cookie decorating, were provided as a fun study break.         </a>
+        <a class="" style="color: black">        
+            The Fall Festival was an engineering-wide event in collaboration with Penn CSS, HKN, and SWE. Members of the four clubs were there to give advance registration advice to students who had any last minute questions before the deadline. Fall themed snacks and activities, including apple cider and cookie decorating, were provided as a fun study break.         </a>
          <!-- <a class ="fontTheme1"> 
            <a href="https://drive.google.com/open?id=1RjNy09AcpOQnSk4dGpWj2oZsviHyR0ev"> Resources </a>
          </a> -->
@@ -585,15 +193,15 @@
           <img class="w3-padding" src="res/events/bootstrap.png" width="40%" align="left" style="padding:5% 10% 10% 5%"> 
           <h2 class="fontTheme1" align="center" style=""> WEBSITE WORKSHOP </h2>
           <h3 class="fontTheme1" style="font-size: 12px;" align="right"> 11/03/2018 </h3>
-          <a class="fontTheme1">        
-            This workshop went over the basics of web design and development, from the most efficient frameworks to how to publish the website. Attendees learned about different ways to integrate html, css, and javascript to achieve various designs, and how to utilize Bootstrap, one of the most popular website frameworks, to expedite the development process. 
+          <a class="" style="color: black">        
+              This workshop went over the basics of web design and development, from the most efficient frameworks to how to publish the website. Attendees learned about different ways to integrate html, css, and javascript to achieve various designs, and how to utilize Bootstrap, one of the most popular website frameworks, to expedite the development process. 
 
           </a>
            <br>
-           <a class ="fontTheme1"> 
+           <h3 class ="fontTheme1" style="font-size: 14px" align="right"> 
               <a href="https://drive.google.com/open?id=1RjNy09AcpOQnSk4dGpWj2oZsviHyR0ev"> Resources</a>
 
-           </a>
+           </h3>
       </div>
       <div class="w3-padding"style="; padding %2">
           <br>
@@ -602,11 +210,8 @@
           <img class="w3-padding" src="res/events/Houdini.jpg" width="50%" align="left" style="padding:5% 10% 10% 5%"> 
           <h2 class="fontTheme1" align="center" style=""> HOUDINI WORKSHOP </h2>
           <h3 class="fontTheme1" style="font-size: 12px;" align="right"> 11/02/2018 </h3>
-          <a class="fontTheme1">        
-            The Houdini workshop held by the UPenn ACM SIGGRAPH Chapter was an opportunity for students to learn the basics of Houdini.  Students learned modeling and animation techniques to become familiar with Houdini’s interface and tools.  They then continued to particle simulations, where they built fountains and fireworks.           </a>
-           <!-- <a class ="fontTheme1"> 
-             <a href="https://drive.google.com/open?id=1RjNy09AcpOQnSk4dGpWj2oZsviHyR0ev"> Resources </a>
-           </a> -->
+          <a class="" style="color: black">        
+              The Houdini workshop was an opportunity for students to learn the basics of Houdini.  Students learned modeling and animation techniques to become familiar with Houdini’s interface and tools.  They then continued to particle simulations, where they built fountains and fireworks.           </a>
       </div>
       <div class="w3-padding"style="; padding %2">
           <br>
@@ -615,12 +220,9 @@
         <img class="w3-padding" src="res/events/pumpkin.jpg" width="35%" align="left" style="padding:5% 10% 10% 5%"> 
           <h2 class="fontTheme1" align="center" style=""> HALLOWEEN POTLUCK </h2>
           <h3 class="fontTheme1" style="font-size: 12px;" align="right"> 10/31/2018 </h3>
-          <a class="fontTheme1">        
-            This event is for the annual Halloween celebration at SIG lab. This time SIGGRAPH hosted. The event was a great success. Thank you for those of you who dressed up and participated in the activities. We got to pick out the best Halloween costumes and the best decorated pumpkins! Congratulations to Adam Mally, Alexis Ward, Allison Kim and Sharon Dong. 
+          <a class="" style="color: black">        
+              This event is for the annual Halloween celebration at SIG lab. This time SIGGRAPH hosted. The event was a great success. Thank you for those of you who dressed up and participated in the activities. We got to pick out the best Halloween costumes and the best decorated pumpkins! Congratulations to Adam Mally, Alexis Ward, Allison Kim and Sharon Dong. 
            </a>
-           <!-- <a class ="fontTheme1"> 
-             <a href="https://drive.google.com/open?id=1RjNy09AcpOQnSk4dGpWj2oZsviHyR0ev"> Resources </a>
-           </a> -->
       </div>
       <div class="w3-padding"style="; padding %2">
           <br>
@@ -629,27 +231,23 @@
       <img class="w3-padding" src="res/events/panel.jpg" width="35%" align="left" style="padding:5% 10% 10% 5%"> 
       <h2 class="fontTheme1" align="center" style=""> STUDENT PANEL NIGHT </h2>
           <h3 class="fontTheme1" style="font-size: 12px;" align="right"> 10/26/2018 </h3>
-          <a class="fontTheme1">        
-            The Student Panel consisted of a collection of CG@Penn students, grad and undergrad, who each had different experiences in their journey through Computer Graphics. The panel discussed internship opportunities for undergrads, finding the right companies, balancing classes at Penn, and various career options that students can pursue after DMD and CGGT.           </a>
-           <!-- <a class ="fontTheme1"> 
-            <a href="https://drive.google.com/open?id=1RjNy09AcpOQnSk4dGpWj2oZsviHyR0ev"> Resources </a>
-           </a> -->
+          <a class="" style="color: black">        
+              The Student Panel consisted of a collection of CG@Penn students, grad and undergrad, who each had different experiences in their journey through Computer Graphics. The panel discussed internship opportunities for undergrads, finding the right companies, balancing classes at Penn, and various career options that students can pursue after DMD and CGGT.           </a>
       </div>
       <div class="w3-padding"style="; padding %2">
           <br>
      </div>
      <div class="w3-row" style="background: #ffff; padding:5% 5% 5% 5%">
       <h2 class="fontTheme1" align="center" style=""> DEMO REEL NIGHT </h2>
-        <img src="res/events/dono.png" width="45%" max-height="200px" align="left" style="padding:1% 2% 1% 1%"> 
+        <img src="res/events/dono.png" width="35%" max-height="200px" align="left" style="padding:1% 2% 1% 1%"> 
           <h3 class="fontTheme1" style="font-size: 12px;" align="right"> 10/19/2018 </h3>
-          <a class="fontTheme1">        
-            Students submitted links to their demo reels ahead of time to be critiqued. During the critique we had recent alumni video in to provide live feedback and give a chance for the students to ask questions and/or advice. Additionally, older alumni provided more feedback afterwards that was compiled by our board and sent directly to the students. We also went through good demo reel practices and, as always, showed off the infamous </a> 
+          <a class="" style="color: black">        
+              Students submitted links to their demo reels ahead of time to be critiqued. During the critique we had recent alumni video in to provide live feedback and give a chance for the students to ask questions and/or advice. Additionally, older alumni provided more feedback afterwards that was compiled by our board and sent directly to the students. We also went through good demo reel practices and, as always, showed off the infamous </a> 
             <a href="https://www.youtube.com/watch?v=6BMtWFkF3EM" target="_blank">2011 Dono Reel.</a>
             Much thanks to Jeremy Newlin ('14), James Bartolozzi ('16), Max Gilbert ('16), Richard Lee ('17),  Mariano Merchante ('17), Isabela Rovira ('18), and Daniel Mcann ('18)!         <br>
-           <br>
-           <a class ="fontTheme1"> 
-             <a href="https://drive.google.com/open?id=1E85d8lN7ZYfVEMkGtoOGsv0adp17uD__auWA_vlc0bA"> Resources </a>
-           </a>
+           <h3 class ="fontTheme1" align="right" style="font-size: 14px"> 
+             <a href="https://drive.google.com/open?id=1E85d8lN7ZYfVEMkGtoOGsv0adp17uD__auWA_vlc0bA" align="right"> Resources </a>
+           </h3>
       </div>
     <div class="w3-padding"style="; padding %2">
         <br>
@@ -658,7 +256,7 @@
        <img class="w3-padding" src="res/events/maya.png" width="30%" align="left" style="padding:5% 10% 10% 5%"> 
         <h2 class="fontTheme1" align="center" style=""> MAYA WORKSHOP </h2>
         <h3 class="fontTheme1" style="font-size: 12px;" align="right"> 10/19/2018 </h3>
-        <a class="fontTheme1">        
+        <a class="" style="color: black">        
             The Maya Event was a workshop based tutorial where board members taught and guided students through the AutoDesk Maya software. The students who attended learned the fundamental tools of the program and were able to create a complete canoe by the end of the event.       
         </a>
             <!-- <a class ="fontTheme1"> 
@@ -671,13 +269,13 @@
    </div>
    <div class="w3-row" style="background: #ffff; padding:5% 5% 5% 5%">
        <img src="res/events/resume.jpg" width="30%" max-height="200px" align="left" style="padding:1% 2% 1% 1%"> 
-        <h2 class="fontTheme1" align="center" style=""> RESUME/COVER LETTER WORSHOP </h2>
+        <h2 class="fontTheme1" align="center" style=""> RESUME/COVER LETTER WORKSHOP </h2>
         <h3 class="fontTheme1" style="font-size: 12px;" align="right"> 10/12/2018 </h3>
-        <a class="fontTheme1">        
-          For this workshop, we went through resumes and critiqued and provided advice for students that submitted them ahead of time. Additionally, we passed out past cover letters for examples of good and back practices along with different formatting and topics that can be brought up in them.         </a>
-         <a class ="fontTheme1"> 
-           <a href="https://drive.google.com/drive/folders/1VjiefDClQhiqvWdMx87oK0h-14CttPqa?usp=sharing"> Resources </a>
-         </a>
+        <a class="" style="color: black">        
+            For this workshop, we went through resumes and critiqued and provided advice for students that submitted them ahead of time. Additionally, we passed out past cover letters for examples of good and back practices along with different formatting and topics that can be brought up in them.         </a>
+          <h3 class ="fontTheme1" style="font-size: 14px" align="right"> 
+            <a href="https://drive.google.com/drive/folders/1VjiefDClQhiqvWdMx87oK0h-14CttPqa?usp=sharing"> Resources </a>
+          </h3>
     </div>
    <div class="w3-padding"style="; padding %2">
         <br>
@@ -686,16 +284,11 @@
       <img class="w3-padding" src="res/events/mentor.png" width="40%" align="left" style="padding:5% 10% 10% 5%"> 
       <h2 class="fontTheme1" align="center" style=""> MENTOR/MENTEE MIXER </h2>
       <h3 class="fontTheme1" style="font-size: 12px;" align="right"> 9/28/2018 </h3>
-
-        <!-- <img src="res/events/Houdini.jpg" width="30%" max-height="200px" align="left" style="padding:1% 2% 1% 1%">  -->
-        <a class="fontTheme1">        
-          Thank you to everybody who came to our Mentor/Mentee Mixer! It was great to see faces new and old. 
+        <a class="" style="color: black">        
+            Thank you to everybody who came to our Mentor/Mentee Mixer! It was great to see faces new and old. 
           The Mixer was for students who are interested in finding a mentor or a mentee in the CG@Penn community. 
 
          </a>
-         <!-- <a class ="fontTheme1"> 
-           <a href="https://drive.google.com/open?id=1RjNy09AcpOQnSk4dGpWj2oZsviHyR0ev"> Resources </a>
-         </a> -->
     </div>
     <div class="w3-padding"style="; padding %2">
         <br>
@@ -704,10 +297,8 @@
           <img class="" src="res/events/shadertoy.png" width="40%" align="left" style="padding:5% 10% 10% 5%"> 
           <h2 class="fontTheme1" align="center" style=""> BEGINNERS'S SHADERTOY WORKSHOP </h2>
           <h3 class="fontTheme1" style="font-size: 12px;" align="right"> 9/21/2018 </h3>
-       
-        <!-- <img src="res/events/Houdini.jpg" width="30%" max-height="200px" align="left" style="padding:1% 2% 1% 1%">  -->
-        <a class="fontTheme1">        
-          The Shader-Toy workshop introduced new students to the core ideas behind computer graphics and the computer graphics pipeline. The first half of the workshop was a mini-lecture to discuss the rendering pipeline from code to screen, whilst the second was spent looking at randomness, noise functions, renderers, and Shader-Toy as a platform to test them.          </a>
+          <a class="" style="color: black">        
+              The Shader-Toy workshop introduced new students to the core ideas behind computer graphics and the computer graphics pipeline. The first half of the workshop was a mini-lecture to discuss the rendering pipeline from code to screen, whilst the second was spent looking at randomness, noise functions, renderers, and Shader-Toy as a platform to test them.          </a>
          <br>
     </div>
     </div>
@@ -727,18 +318,6 @@
       <label> W3 school and </label>
       <a href="https://www.seas.upenn.edu/" target="_blank">Penn Engineering</a>
     </p>
-
-    <!-- <div style="position:relative; bottom:100px; z-index:1;" class="w3-tooltip w3-right">
-      <span class="w3-text w3-padding theme w3-hide-small">
-        Go To Top
-      </span>
-
-      <a class="w3-button w3-theme" href="#myPage">
-        <span class="w3-xlarge">
-          <i class="fa fa-chevron-circle-up"></i>
-        </span>
-      </a>
-    </div> -->
   </footer>
 
 </body>
